@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>M.Hess - Diplomski/Završni</title>
+<meta charset="iso-8859-1">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="styles/main.css" rel="stylesheet" type="text/css" media="all">
+<noscript>
+<style>
+body{opacity:1;}
+.row3 {background: url(styles/images/wall/bg.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; -ms-background-size: cover; background-size: cover;}
+.row1{
+	background: url(images/Venus.gif), url(styles/images/wall/h.jpg);		
+	background-size: auto, cover;
+  -webkit-background-size: auto, cover;
+  -moz-background-size: auto, cover;
+  -o-background-size: auto, cover;
+  -ms-background-size: auto, cover;
+	background-repeat: no-repeat, no-repeat;						
+	background-position: 35% center, center;
+}
+.row7 {background: url(styles/images/wall/f.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; -ms-background-size: cover; background-size: cover;}
+</style>
+</noscript>
+<link rel="shortcut icon" href="styles/images/favicon.ico">
+<!--[if lt IE 9]>
+<link href="styles/ie/ie8.css" rel="stylesheet" type="text/css" media="all">
+<script src="scripts/ie/css3-mediaqueries.min.js"></script>
+<script src="scripts/ie/html5shiv.min.js"></script>
+<![endif]-->
+<script>
+/*!
+* Various functions for Neon text effect
+*/
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+function neon(){
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message.length;m++)
+//eval("document.all.neonlight"+m).style.color=neonbasecolor
+crossref(m).style.color=neonbasecolor
+}
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",3500)
+return
+}
+}
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-20331217-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</head>
+<body class="">
+<div class="wrapper row1 aniRow1">
+  <header id="header" class="full_width clear">
+    <hgroup>
+      <h1><a href="index.html">dr.sc. Mirano Hess</a></h1>
+      <h2>Pomorski fakultet u Rijeci</h2>
+    </hgroup>
+    <div id="header-contact" class="rnd5">
+      <ul class="list none">
+        <!-- <li><span class="icon-phone"></span> Studentska ulica 2, 51000 Rijeka, tel: +385 (0)51 338 411 </li>  -->
+		<li>
+<script type="text/javascript">
+//<![CDATA[
+<!--
+var x="function f(x){var i,o=\"\",l=x.length;for(i=l-1;i>=0;i--) {try{o+=x.c" +
+"harAt(i);}catch(e){}}return o;}f(\")\\\"function f(x,y){var i,o=\\\"\\\\\\\""+
+"\\\\,l=x.length;for(i=0;i<l;i++){if(i<61)y++;y%=127;o+=String.fromCharCode(" +
+"x.charCodeAt(i)^(y++));}return o;}f(\\\"\\\\Z/!1+-$8`' =\\\\\\\\\\\"\\\\=62" +
+"vB^\\\\\\\\005F\\\\\\\\000\\\\\\\\030\\\\\\\\t\\\\\\\\010M.V\\\\\\\\033\\\\" +
+"\\\\031\\\\\\\\023\\\\\\\\020\\\\\\\\nn9mbzxM\\\\\\\\177wa|9qiA=\\\\\\\\001" +
+"WLSEN\\\\\\\\020s\\\\\\\\023xY^S\\\\\\\\031@Z\\\\\\\\034MQL, 6*d +&!%jj\\\\" +
+"\\\\020op*=0;?\\\\\\\\024>99,81/`r?aBHYS_\\\"\\\\,61)\\\"(f};)lo,0(rtsbus.o" +
+" nruter};)i(tArahc.x=+o{)--i;0=>i;1-l=i(rof}}{)e(hctac};l=+l;x=+x{yrt{)05=!" +
+")31/l(tAedoCrahc.x(elihw;lo=l,htgnel.x=lo,\\\"\\\"=o,i rav{)x(f noitcnuf\")" ;
+while(x=eval(x));
+//-->
+//]]>
+</script>
+		</li>
+		<li>soba 426, konzultacije: 09-12 uz<br> prethodni dogovor emailom</li>
+		<a name="anchVrh"></a>
+      </ul>
+    </div>
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<div class="slickm">
+<div class="wrapper row2">
+  <nav id="topnav">
+    <ul class="clear">
+      <li><a href="index.html" title="">Naslovnica</a></li>
+      <li><a class="drop" title="">Kolegiji</a>
+        <ul>
+          <li><a href="Oru.html" title="">Organizacija rada i upravljanje na brodu</a></li>
+          <li><a href="Pb.html" title="">Plovidba broda</a></li>
+          <li><a href="Pub.html" title="">Poslovanje u brodarstvu</a></li>
+          <li><a href="Up.html" title="">Ugovaranje u pomorstvu</a></li>
+          <li><a href="Uop.html" title="">Upravljanje obalnim područjem</a></li>
+          <li><a href="Opb.html" title="">Optimizacija poslovanja u brodarstvu</a></li>
+        </ul>
+      </li>
+      <li><a href="Ispiti.html" title="">Ispiti</a></li>
+      <li><a class="drop" title="">Seminari i zadatci</a>
+        <ul>
+          <li><a href="Sem.html" title="">Seminari</a></li>
+          <li><a href="Zad.html" title="">Radni zadatci</a></li>
+        </ul>
+      </li>
+		<li class="active"><a class="drop" title="">Razno</a>
+			<ul>
+				<li class="active"><a href="#" onclick="gateKeeper('10','DPL');return false;">Diplomski i Završni rad</a></li>
+				<li><a href="#" onclick="gateKeeper('40','UPL');return false;" title="">Pošalji datoteku</a></li>
+				<li><a href="#" onclick="gateKeeper('30','DOW');return false;" title="">Preuzmi datoteku</a></li>
+				<li><a href="Gal.html" title="">Galerija</a></li>
+				<li><a href="Sta.html" title="">Navigacija i Staze u okolici</a></li>
+			</ul>
+		</li>
+      <li class="last-child"><a href="Kon.php" title="Kontaktiraj nastavnika">Kontakt</a></li>
+    </ul>
+  </nav>
+</div>
+</div>
+<!-- content -->
+<div class="wrapper row3 aniRow3">
+  <div id="container">
+    <!-- ################################################################################################ -->
+    <div class="one_half semlevo first">
+        <!-- ########################################################################################## -->
+      <h2>Teme diplomskih i završnih radova</h2>
+      <div class="accordion-wrapper"><a href="javascript:void(0)" class="accordion-title orange"><span>Organizacija rada i upravljanje na brodu</span></a>
+        <div class="accordion-content">
+		<ul class="list tick">
+		  <li><a href="#" onclick="gateKeeper('S1-Oru','DPL');return false;">Oru-Zr-1</a>: Utjecaj organizacije timskog rada u navigaciji na prevenciju nasukanja broda</li>
+		  <li><a href="#" onclick="gateKeeper('S2-Oru','DPL');return false;">Oru-Zr-2</a>: Značaj organizacije timskog rada u prevenciji nezgoda na moru</li>
+		  <li><a href="#" onclick="gateKeeper('S3-Oru','DPL');return false;">Oru-Zr-3</a>: Utjecaj organizacije timskog rada u navigaciji na prevenciju sudara brodova</li>
+		  <li><a href="#" onclick="gateKeeper('S4-Oru','DPL');return false;">Oru-Zr-4</a>: Značaj ljudskog faktora u pomorskim nezgodama</li>
+		  <li><a href="#" onclick="gateKeeper('S5-Oru','DPL');return false;">Oru-Zr-5</a>: Utjecaj organizacije timskog rada u navigaciji na stradanje broda u nevremenu</li>
+		  <li><a href="#" onclick="gateKeeper('S6-Oru','DPL');return false;">Oru-Zr-6</a>: Organizacija rada u funkciji sprečavanja nezgoda tijekom manevriranja broda u luci</li>
+		  <li><a href="#" onclick="gateKeeper('S7-Oru','DPL');return false;">Oru-Zr-7</a>: Upravljanje navigacijskim timom u funkciji sprečavanja nasukanja broda</li>
+		  <li><a href="#" onclick="gateKeeper('S8-Oru','DPL');return false;">Oru-Zr-8</a>: Ljudski faktor i sprečavanje nezgoda na moru</li>
+		  <li><a href="#" onclick="gateKeeper('S9-Oru','DPL');return false;">Oru-Zr-9</a>: Uloga timskog rada na mostu za vrijeme boravka broda na sidrištu</li>
+		  <li><a href="#" onclick="gateKeeper('S10-Oru','DPL');return false;">Oru-Zr-10</a>: Timski rad u funkciji sprečavnja nezgoda tijekom lučkih operacija prekrcaja tereta</li>
+		  <li><a href="#" onclick="gateKeeper('S11-Oru','DPL');return false;">Oru-Zr-11</a>: Organizacija navigacijske straže u funkciji sprečavanja sudara brodova</li>
+		  <li><a href="#" onclick="gateKeeper('S12-Oru','DPL');return false;">Oru-Zr-12</a>: Timski rad na mostu u funkciji sprečavanja sudara brodova u tjesnacima</li>
+		  <li><a href="#" onclick="gateKeeper('S13-Oru','DPL');return false;">Oru-Zr-13</a>: Utjecaj organizacije rada na sprečavanje strukturalnih oštećenja broda</li>
+		  <li><a href="#" onclick="gateKeeper('S14-Oru','DPL');return false;">Oru-Zr-14</a>: Organizacija rada na školskom brodu u funkciji sprečavanja nezgoda</li>
+		  <li><a href="#" onclick="gateKeeper('S15-Oru','DPL');return false;">Oru-Zr-15</a>: Ljudski faktor i nezgoda na brodu koja rezultira gubitkom ljudskog života</li>
+		  <li><a href="#" onclick="gateKeeper('S16-Oru','DPL');return false;">Oru-Zr-16</a>: Ljudski faktor – primarni uzrok požara na brodu</li>
+		  <li><a href="#" onclick="gateKeeper('S17-Oru','DPL');return false;">Oru-Zr-17</a>: Upravljanje radnim timom u sprečavanju gubitka ljudskog života</li>
+		  <li><a href="#" onclick="gateKeeper('S18-Oru','DPL');return false;">Oru-Zr-18</a>: Sprečavanje požara na brodu učinkovitom organizacijom rada</li>
+		</ul>
+        </div>
+      </div>
+      <div class="accordion-wrapper"><a href="javascript:void(0)" class="accordion-title orange"><span>Plovidba broda</span></a>
+        <div class="accordion-content">
+		<ul class="list tick">
+		  <li><a href="#" onclick="gateKeeper('S1-Pb','DPL');return false;">Pb-Zr-1</a>: Plovidba u području leda</li>
+		  <li><a href="#" onclick="gateKeeper('S2-Pb','DPL');return false;">Pb-Zr-2</a>: Nautičke karte</li>
+		  <li><a href="#" onclick="gateKeeper('S3-Pb','DPL');return false;">Pb-Zr-3</a>: GMDSS sustav u pomorstvu</li>
+		  <li><a href="#" onclick="gateKeeper('S4-Pb','DPL');return false;">Pb-Zr-4</a>: Automatsko upravljanje kormilom na brodu</li>
+		  <li><a href="#" onclick="gateKeeper('S5-Pb','DPL');return false;">Pb-Zr-5</a>: Primjena zvrčnog kompasa na brod</li>
+		  <li><a href="#" onclick="gateKeeper('S6-Pb','DPL');return false;">Pb-Zr-6</a>: ECDIS sustav na brodu</li>
+		  <li><a href="#" onclick="gateKeeper('S7-Pb','DPL');return false;">Pb-Zr-7</a>: Integrirani navigacijski sustav</li>
+		  <li><a href="#" onclick="gateKeeper('S8-Pb','DPL');return false;">Pb-Zr-8</a>: DGPS i GPS navigacija u pomorstvu</li>
+		  <li><a href="#" onclick="gateKeeper('S9-Pb','DPL');return false;">Pb-Zr-9</a>: Satelitska navigacija u pomorstvu</li>
+		  <li><a href="#" onclick="gateKeeper('S10-Pb','DPL');return false;">Pb-Zr-10</a>: Primjena doplerovog principa u mjerenju brzine broda</li>
+		  <li><a href="#" onclick="gateKeeper('S11-Pb','DPL');return false;">Pb-Zr-11</a>: Mjerenje brzine broda u pomorstvu</li>
+		  <li><a href="#" onclick="gateKeeper('S12-Pb','DPL');return false;">Pb-Zr-12</a>: Mjerenje dubine mora u pomorstvu</li>
+		</ul>
+        </div>
+      </div>
+      <div class="accordion-wrapper"><a href="javascript:void(0)" class="accordion-title orange"><span>Poslovanje u brodarstvu</span></a>
+        <div class="accordion-content">
+		<ul class="list tick">
+		  <li><a href="#" onclick="gateKeeper('Dr1-Pub','DPL');return false;">Pub-Dr-1</a>: Utjecaj ciklusa pomorskog tržišta na strategiju poslovanja brodara</li>
+		  <li><a href="#" onclick="gateKeeper('Dr2-Pub','DPL');return false;">Pub-Dr-2</a>: Deskriptivni model segementacije pomorskog tržišta</li>
+		  <li><a href="#" onclick="gateKeeper('Dr3-Pub','DPL');return false;">Pub-Dr-3</a>: Komparativna analiza uspješnosti različitih politika poslovanja brodara</li>
+		  <li><a href="#" onclick="gateKeeper('Dr4-Pub','DPL');return false;">Pub-Dr-4</a>: Utjecaj globalnih trgovinskih ruta na pomorsko tržište</li>
+		  <li><a href="#" onclick="gateKeeper('Dr5-Pub','DPL');return false;">Pub-Dr-5</a>: Dinamika pomorsko-tržišnog segmenta rasutih i specijalnih tereta</li>
+		  <li><a href="#" onclick="gateKeeper('Dr6-Pub','DPL');return false;">Pub-Dr-6</a>: Utjecaj tržišnih čimbenika u slobodnom i linijskom brodarstvu</li>
+		  <li><a href="#" onclick="gateKeeper('Dr7-Pub','DPL');return false;">Pub-Dr-7</a>: Utjecaj ciklusa brodogradnje i regulacija u pomorstvu na poslovno odlučivanje brodara</li>
+		<li><a href="#" onclick="gateKeeper('Dr8-Pub','DPL');return false;">Pub-Dr-8</a>: Tržišna evaluacija brodova u prekomorskoj trgovini</li>
+		<li><a href="#" onclick="gateKeeper('Dr9-Pub','DPL');return false;">Pub-Dr-9</a>: Utjecaj odabira države pripadnosti na upravljanje brodom</li>
+		</ul>
+        </div>
+      </div>
+      <div class="accordion-wrapper"><a href="javascript:void(0)" class="accordion-title orange"><span>Ugovaranje u pomorstvu</span></a>
+        <div class="accordion-content">
+		<ul class="list tick">
+		  <li><a href="#" onclick="gateKeeper('Dr1-Up','DPL');return false;">Up-Dr-1</a>: Modeliranje rizika poslovanja brodara u funkciji predviđanja ciklusa pomorskog tržišta</li>
+		  <li><a href="#" onclick="gateKeeper('Dr2-Up','DPL');return false;">Up-Dr-2</a>: Utjecaj evropskog pomorskog okruženja na  hrvatsku brodogradnju</li>
+		  <li><a href="#" onclick="gateKeeper('Dr3-Up','DPL');return false;">Up-Dr-3</a>: Pozicija prijevoznika u ugovoru o prijevozu stvari morem</li>
+		  <li><a href="#" onclick="gateKeeper('Dr4-Up','DPL');return false;">Up-Dr-4</a>: Odgovornost prijevoznika prema konvenciji o prijevozu stvari</li>
+		  <li><a href="#" onclick="gateKeeper('Dr5-Up','DPL');return false;">Up-Dr-5</a>: Zakup broda prema hrvatskom pravu</li>
+		  <li><a href="#" onclick="gateKeeper('Dr6-Up','DPL');return false;">Up-Dr-6</a>: Ugovorne strane prema  ugovoru o iskorištavanju pomorskih brodova</li>
+		  <li><a href="#" onclick="gateKeeper('Dr7-Up','DPL');return false;">Up-Dr-7</a>: Ukrcaj, prijevoz i predaja tereta primaocu</li>
+		  <li><a href="#" onclick="gateKeeper('Dr1-Pub','DPL');return false;">Up-Dr-8</a>: Utjecaj ciklusa pomorskog tržišta na ugovaranje prijevoza u pomorstvu</li>
+		  <li><a href="#" onclick="alert('Osnovna literatura: BIMCO Shipbuilding Contract');return false;">Up-Dr-9</a>: Pozicja brodara prema ugovoru o gradnji broda</li>
+		  <li><a href="#" onclick="alert('Osnovna literatura: BIMCO Voyage Charter Party i Time Charter Party');return false;">Up-Dr-10</a>: Komparacija ugovora o zakupu broda na putovanje i zakupa broda na vrijeme</li>
+		</ul>
+        </div>
+      </div>
+      <div class="accordion-wrapper"><a href="javascript:void(0)" class="accordion-title orange"><span>Upravljanje obalnim područjem</span></a>
+        <div class="accordion-content">
+		<ul class="list tick">
+		  <li><a href="#" onclick="gateKeeper('S1-Uop','DPL');return false;">Uop-Dr-1</a>: Poboljšanje praćenja degradacije obalnog područja</li>
+		  <li><a href="#" onclick="gateKeeper('S2-Uop','DPL');return false;">Uop-Dr-2</a>: Procjena održivog kapaciteta turističkog razvoja obalnog područja</li>
+		  <li><a href="#" onclick="gateKeeper('S3-Uop','DPL');return false;">Uop-Dr-3</a>: Planski razvoj obalnog i priobalnog područja</li>
+		  <li><a href="#" onclick="gateKeeper('S4-Uop','DPL');return false;">Uop-Dr-4</a>: Razlozi uvođenja upravljanja obalnim područjem</li>
+		  <li><a href="#" onclick="gateKeeper('S5-Uop','DPL');return false;">Uop-Dr-5</a>: Turizam i održivi razvoj</li>
+		  <li><a href="#" onclick="gateKeeper('S6-Uop','DPL');return false;">Uop-Dr-6</a>: Ostvarivost programa integriranog upravljanja obalnim područjem</li>
+		  <li><a href="#" onclick="gateKeeper('S7-Uop','DPL');return false;">Uop-Dr-7</a>: Određivanje i elaboracija strategija, opcija i akcija održivog razvoja obalnog područja</li>
+		  <li><a href="#" onclick="gateKeeper('S8-Uop','DPL');return false;">Uop-Dr-8</a>: Koncept, principi i trenutna iskustva integriranog upravljanja obalnim područjem</li>
+		  <li><a href="#" onclick="gateKeeper('S9-Uop','DPL');return false;">Uop-Dr-9</a>: Procjena mogućnosti dugoročne implementacije  CAMP projekta</li>
+		  <li><a href="#" onclick="gateKeeper('S10-Uop','DPL');return false;">Uop-Dr-10</a>: Status upravljanja obalnim područjem i sukobi interesa</li>
+		  <li><a href="#" onclick="gateKeeper('S11-Uop','DPL');return false;">Uop-Dr-11</a>: Mogućnosti i izazovi ICAM projekta</li>
+		  <li><a href="#" onclick="gateKeeper('S12-Uop','DPL');return false;">Uop-Dr-12</a>: Integrirano upravljanje obalnim područjem u praksi</li>
+		  <li><a href="#" onclick="gateKeeper('S13-Uop','DPL');return false;">Uop-Dr-13</a>: Procjena uspješnosti ICAM programa</li>
+		  <li><a href="#" onclick="gateKeeper('S14-Uop','DPL');return false;">Uop-Dr-14</a>: Održivi turizam u obalnom području</li>
+		  <li><a href="#" onclick="gateKeeper('S17-Uop','DPL');return false;">Uop-Dr-15</a>: Preporuke dobre prakse za procjenu nosivog kapaciteta turizma</li>
+		  <li><a href="#" onclick="gateKeeper('S18-Uop','DPL');return false;">Uop-Dr-16</a>: Preporuke dobre prakse za procjenu nosivog kapaciteta turizma u obalnom području Mediterana</li>
+		  <li><a href="#" onclick="gateKeeper('S21-Uop','DPL');return false;">Uop-Dr-17</a>: Mediteranska strategija održivog razvoja 2016-2025</li>
+		  <li><a href="#" onclick="gateKeeper('S22-Uop','DPL');return false;">Uop-Dr-18</a>: Smjer razvoja posebnih morskih regiona</li>
+		  <li><a href="#" onclick="gateKeeper('S23-Uop','DPL');return false;">Uop-Dr-19</a>: Smanjenje rizika katastrofa u priobalnom području</li>
+		  <li><a href="#" onclick="gateKeeper('S24-Uop','DPL');return false;">Uop-Dr-20</a>: Ostvarenje ekosustavnog pristupa upravljanja morskim i obalnim područjem</li>
+		  <li><a href="#" onclick="gateKeeper('S25-Uop','DPL');return false;">Uop-Dr-21</a>: Upravljanja obalnim područjem i načela dobre prakse</li>
+		  <li><a href="#" onclick="gateKeeper('S26-Uop','DPL');return false;">Uop-Dr-22</a>: Implementacija integralnog upravljanje obalnim i morskim područjem
+		  <li><a href="#" onclick="gateKeeper('S27-Uop','DPL');return false;">Uop-Dr-23</a>: Korelacija integralnog upravljanje obalnim područjem i biološke raznolikosti</li>
+		  <li><a href="#" onclick="gateKeeper('S28-Uop','DPL');return false;">Uop-Dr-24</a>: Obalni krajolici Mediterana - praksa upravljanja, tipologija i održivost</li>
+		  <li><a href="#" onclick="gateKeeper('S29-Uop','DPL');return false;">Uop-Dr-25</a>: Ekonomski učinci pomorsko prostornog planiranja</li>
+		  <li><a href="#" onclick="gateKeeper('S31-Uop','DPL');return false;">Uop-Dr-26</a>: Regionalno upravljanje morskim i priobalnim područjem</li>		  
+		</ul>
+        </div>
+      </div>
+        <!-- ########################################################################################## -->
+		<div class="embed-container">
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTTd-JGF3IAcXwqWoWoxDX0Q5blGDavORaX5kPdf8cGPgJYA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Učitavanje...</iframe>
+		</div>
+		<div class="embed-container2">
+			<iframe frameborder='0' src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDHvUa4C-DhoRWGtTyvApTKcimTKbPDd1-kv0VMGP0Pvox3ozekaCwf4tUl4HxWUyoGhiOo-hDEWJD/pubhtml?gid=369610226&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+		</div>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div id="sidebar_1" class="sidebar one_half semdesno">
+      <aside>
+        <!-- ########################################################################################## -->
+		<!-- /section -->
+		<section>
+			<article>
+			<h2>Uputstva</h2>
+			<ul class="list arrow">
+			<li>Student osmišljava i predlaže nastavniku proizvoljnu temu diplomskog/ završnog rada iz odgovarajućeg kolegija.</li> <li>Student se može odlučiti i za odabir neke od ponuđenih tema (navedenih lijevo na ovoj strani).</li> <li>Nastavnik potvrđuje studentu da se slaže s predloženom/ odabranom temom rada.</li> <li>Za ponuđene teme, klikom na odgovarajuću šifru teme crvene boje dostupna je literatura koju student može koristiti kao dopunsku ili pomoćnu literaturu pri pisanju rada. Osnovnu, tj. temeljnu  literaturu student pronalazi i koristi proizvoljno.</li>
+			<li>Diplomski/ završni rad mora biti izrađen u MS Word aplikaciji i  sadrži minimum 50 strana a završni rad 30 strana, osim ako drukčije nije dogovoreno s nastavnikom !</li>
+			<li>Predloženu/ odabranu temu potrebno je prijaviti u obrascu "Upis teme dipl/završ. rada" na ovoj strani, upisom traženih podataka.</li>
+			<li>U tablici "Zauzete teme dipl/završ. rada: do sada" vidljive su teme koje su već zauzete od drugih studenata. Student ne može prijaviti temu koja je već zauzeta !</li>			
+			<li class="konzultacije"><strong>KONZULTACIJE</strong> soba 426: 09-12 uz prethodni dogovor emailom <a href="Kon.php">ovdje &raquo;</a></li>
+			</ul>
+			</article>
+		</section>
+        <section>
+          <article>
+            <h2>Predaja dipl/završ. rada</h2>
+            <p><strong><script>      
+						var message="Datoteke koje sadrže završen dipl/završ. rad potrebno je imenovati s šifrom vaše teme, primjerice na sljedeći način: Oru-Zr-12.docx, Pub-Dr-8.docx"
+						var neonbasecolor="#E85533"
+						var neontextcolor="black"
+						var flashspeed=50  //in milliseconds
+						var n=0
+						if (document.all||document.getElementById){
+						document.write('<font color="'+neonbasecolor+'">')
+						for (m=0;m<message.length;m++)
+						document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+						document.write('</font>')
+						}
+						else
+						document.write(message)
+						beginneon()
+						</script></strong></p>
+						
+            <p>Datoteku je potrebno, najkasnije 30 dana prije planiranog termina obrane, poslati nastavniku putem internet strane <a href="#" onclick="gateKeeper('40','UPL');return false;">ovdje &raquo;</a></p>
+          </article>
+        </section>
+        <h2>Dokumenti</h2>
+        <nav>
+          <ul>
+            <li><a href="docs/Zav-Predl.docx">Zavšni rad - Predložak</a></li>
+			<li><a href="docs/Zav-Upute.pdf">Zavšni rad - Upute</a></li>
+			<li><a href="docs/Zav-Pravil.pdf">Zavšni rad - Pravilnik</a></li>
+			<li><a href="docs/Dpl-Predl.docx">Diplomski rad - Predložak</a></li>
+			<li><a href="docs/Dpl-Upute.pdf">Diplomski rad - Upute</a></li>
+			<li><a href="docs/Dpl-Pravil.pdf">Diplomski rad - Pravilnik</a></li>
+          </ul>
+        </nav>
+        <!-- /nav -->
+        <!-- ########################################################################################## -->
+      </aside>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- Footer -->
+<div class="wrapper row7 aniRow7">
+  <div id="footer" class="clear">
+    <div class="three_quarter levogal hidepart">
+      <h2 class="footer_title">Galerija</h2>
+      <ul id="ft_gallery" class="nospace spacing clear">
+			<div id="fscontain">
+        <li class="one_eighth hidimag first"><a href="images/61.jpg"><img src="images/61t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/62.jpg"><img src="images/62t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/63.jpg"><img src="images/63t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/64.jpg"><img src="images/64t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/65.jpg"><img src="images/65t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/71.jpg"><img src="images/71t.jpg" alt=""></a></li>
+        <li class="one_eighth hidepart2"><a href="images/78.jpg"><img src="images/78t.jpg" alt=""></a></li>
+        <li class="one_eighth hidepart2"><a href="images/79.jpg"><img src="images/79t.jpg" alt=""></a></li>
+        
+        <li class="one_eighth hidimag first"><a href="images/72.jpg"><img src="images/72t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/73.jpg"><img src="images/73t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/74.jpg"><img src="images/74t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/75.jpg"><img src="images/75t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/76.jpg"><img src="images/76t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/77.jpg"><img src="images/77t.jpg" alt=""></a></li>
+        <li class="one_eighth hidepart2"><a href="images/80.jpg"><img src="images/80t.jpg" alt=""></a></li>
+        <li class="one_eighth hidepart2"><a href="images/81.jpg"><img src="images/81t.jpg" alt=""></a></li>
+			</div>
+      </ul>
+    </div>
+		<a name="anchPrijava"></a>
+    <div class="one_quarter desnogal logon rnd5">
+      <h2 class="footer_title">Prijava</h2>
+      <form id="formreset" class="rnd5" name="prijava">
+        <div class="form-input clear">
+          <label for="korisnik">Korisnik <span class="required">*</span><br>
+            <input type="text" name="korisnik" id="korisnik" value="" size="22" onkeydown="clickEr();">
+          </label>
+			<div id="er" class="osx-err-hiden">Pogrešne šifre !</div>
+			<div id="ok" class="osx-err-hiden">Uspješno ste prijavljeni ! <br> Dostupni su vam sadržaji za unešenu kombinaciju Korisnik - Zaporka.</div>
+          <label for="zaporka">Zaporka <span class="required">*</span><br>
+            <input type="password" name="zaporka" id="zaporka" value="" size="22" onkeydown="clickEr();">
+          </label>
+        </div>
+        <p>
+          <input type="submit" value="Potvrdi" class="button orange small gradient" onClick="submitentry(); return false;">
+          &nbsp;
+          <input type="reset" value="Odustani" class="button black small gradient" onClick="clickEr();">
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="wrapper row4">
+  <div id="copyright" class="clear">
+    <p class="fl_left">Izrada i &copy; 2018 - MH - PFRI</p>
+    <p class="fl_right">Program BzB</p>
+  </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="scripts/jquery-2.1.4.min.js"><\/script>')</script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script>  window.jQuery.ui || document.write('<script src="scripts/jquery-ui.min.js"><\/script>') </script>
+<script src="scripts/custom.js"></script>
+
+<script>
+// var functions call KOKE :::::
+// removeAttr('width height') KOKE
+jQuery(document).ready(function($){ $('img').removeAttr('width height'); });
+$(document).ready(function() {
+  document.body.style.opacity = '1';
+// getElementById('formreset').reset() KOKE
+	document.getElementById('formreset').reset();
+// slick call KOKE
+$(function() {slick( );});
+// fullsiz call KOKE
+$(function() {fullsiz( );});
+// bg image scroll on pages KOKE
+$(function() {replaceBgRow3();});
+$(function() {replaceBgRow1();});
+$(function() {replaceBgRow7();});
+});
+addListener('load', window, function() {
+  $("body").removeClass("wait");
+});
+addListener('beforeunload', window, function() {
+  $("body").addClass("wait");
+  document.body.style.opacity = '0';
+});
+</script>
+</body>
+</html>
