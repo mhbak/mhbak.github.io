@@ -1,3 +1,9 @@
+
+# HTID:4484934: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:4484934:
+# Sve ovo gore je dodao: 000webhost
+
 # Apache Configuration File
 
 # htaccess instead of
