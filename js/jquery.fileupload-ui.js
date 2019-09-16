@@ -1,18 +1,760 @@
-function k(d,l){d.ja.F.prototype.xa.push("filesContainer","uploadTemplateId","downloadTemplateId");d.Ta("blueimp.fileupload",d.ja.F,{options:{A:!1,S:"template-upload",O:"template-download",b:void 0,G:!1,dataType:"json",Ia:{Ra:" GRE\u0160KA, OBRATI SE NASTAVNIKU !"},Ea:function(){return this.b.children().Ja(".processing").length},P:function(a){return a.result&&d.isArray(a.result.files)?a.result.files:[]},add:function(a,b){if(a.g())return!1;var c=d(this),e=c.data("blueimp-fileupload")||c.data("fileupload"),
-f=e.options;b.context=e.M(b.files).data("data",b).s("processing");f.b[f.G?"prepend":"append"](b.context);e.f(b.context);b.La(function(){return c.F("process",b)}).ha(function(){b.context.i(function(g){d(this).find(".size").text(e.j(b.files[g].size))}).H("processing");e.K(b)}).done(function(){b.context.find(".edit,.start").c("disabled",!1);!1!==e.a("added",a,b)&&(f.A||b.A)&&!1!==b.A&&b.submit()}).D(function(){b.files.error&&b.context.i(function(g){(g=b.files[g].error)&&d(this).find(".error").text(g)})})},
-send:function(a,b){if(a.g())return!1;var c=d(this).data("blueimp-fileupload")||d(this).data("fileupload");b.context&&b.dataType&&"iframe"===b.dataType.substr(0,6)&&b.context.find(".progress").s(!d.m.transition&&"progress-animated").w("aria-valuenow",100).children().first().B("width","100%");return c.a("sent",a,b)},done:function(a,b){if(a.g())return!1;var c=d(this).data("blueimp-fileupload")||d(this).data("fileupload"),e=(b.P||c.options.P)(b);if(b.context)b.context.i(function(h){var m=e[h]||{error:"Empty file upload result"};
-g=c.h();c.f(d(this)).done(function(){var n=d(this);f=c.v([m]).ma(n);c.f(f).done(function(){b.context=d(this);c.a("completed",a,b);c.a("finished",a,b);g.resolve()})})});else{var f=c.v(e)[c.options.G?"prependTo":"appendTo"](c.options.b);var g=c.h();c.f(f).done(function(){b.context=d(this);c.a("completed",a,b);c.a("finished",a,b);g.resolve()})}},D:function(a,b){if(a.g())return!1;var c=d(this).data("blueimp-fileupload")||d(this).data("fileupload"),e;if(b.context)b.context.i(function(g){if("abort"!==b.C){var h=
-b.files[g];h.error=h.error||b.C||b.Ga("unknownError");f=c.h();c.f(d(this)).done(function(){var m=d(this);e=c.v([h]).ma(m);c.f(e).done(function(){b.context=d(this);c.a("failed",a,b);c.a("finished",a,b);f.resolve()})})}else f=c.h(),c.f(d(this)).done(function(){d(this).remove();c.a("failed",a,b);c.a("finished",a,b);f.resolve()})});else if("abort"!==b.C){b.context=c.M(b.files)[c.options.G?"prependTo":"appendTo"](c.options.b).data("data",b);var f=c.h();c.f(b.context).done(function(){b.context=d(this);
-c.a("failed",a,b);c.a("finished",a,b);f.resolve()})}else c.a("failed",a,b),c.a("finished",a,b),c.h().resolve()},progress:function(a,b){if(a.g())return!1;var c=Math.floor(b.loaded/b.total*100);b.context&&b.context.i(function(){d(this).find(".progress").w("aria-valuenow",c).children().first().B("width",c+"%")})},Oa:function(a,b){if(a.g())return!1;var c=d(this),e=Math.floor(b.loaded/b.total*100),f=c.find(".fileupload-progress"),g=f.find(".progress-extended");g.length&&g.R((c.data("blueimp-fileupload")||
-c.data("fileupload")).fa(b));f.find(".progress").w("aria-valuenow",e).children().first().B("width",e+"%")},start:function(a){if(a.g())return!1;var b=d(this).data("blueimp-fileupload")||d(this).data("fileupload");b.N();b.f(d(this).find(".fileupload-progress")).done(function(){b.a("started",a)})},stop:function(a){if(a.g())return!1;var b=d(this).data("blueimp-fileupload")||d(this).data("fileupload"),c=b.h();d.Sa.apply(d,b.u).done(function(){b.a("stopped",a)});b.f(d(this).find(".fileupload-progress")).done(function(){d(this).find(".progress").w("aria-valuenow",
-"0").children().first().B("width","0%");d(this).find(".progress-extended").R("&nbsp;");c.resolve()})},Ma:function(a){if(a.g())return!1;d(this).s("fileupload-processing")},Na:function(a){if(a.g())return!1;d(this).H("fileupload-processing")},Ba:function(a,b){function c(){e.f(b.context).done(function(){d(this).remove();e.a("destroyed",a,b)})}if(a.g())return!1;var e=d(this).data("blueimp-fileupload")||d(this).data("fileupload");b.url?(b.dataType=b.dataType||e.options.dataType,d.ya(b).done(c).D(function(){e.a("destroyfailed",
-a,b)})):c()}},N:function(){this.u=[]},h:function(a){a=a||d.T();this.u.push(a);return a},ua:function(){return this.u},Y:function(){var a=d(this);a.c("href");a.c("download")},j:function(a){return"number"!==typeof a?"":1E9<=a?(a/1E9).toFixed(2)+" GB":1E6<=a?(a/1E6).toFixed(2)+" MB":(a/1E3).toFixed(2)+" KB"},$:function(a){return"number"!==typeof a?"":1E9<=a?(a/1E9).toFixed(2)+" Gbit/s":1E6<=a?(a/1E6).toFixed(2)+" Mbit/s":1E3<=a?(a/1E3).toFixed(2)+" kbit/s":a.toFixed(2)+" bit/s"},ba:function(a){var b=
-new Date(1E3*a);a=Math.floor(a/86400);return(a?a+"d ":"")+("0"+b.getUTCHours()).slice(-2)+":"+("0"+b.getUTCMinutes()).slice(-2)+":"+("0"+b.getUTCSeconds()).slice(-2)},aa:function(a){return(100*a).toFixed(2)+" %"},fa:function(a){return this.$(a.ia)+" | "+this.ba(8*(a.total-a.loaded)/a.ia)+" | "+this.aa(a.loaded/a.total)+" | "+this.j(a.loaded)+" / "+this.j(a.total)},L:function(a,b){if(!a)return d();var c=a({files:b,Da:this.j,options:this.options});return c instanceof d?c:d(this.options.oa).R(c).children()},
-K:function(a){a.context.find(".preview").i(function(b,c){d(c).empty().append(a.files[b].Ka)})},M:function(a){return this.L(this.options.qa,a)},v:function(a){return this.L(this.options.ka,a).find("a[download]").i(this.Y).end()},X:function(a){a.preventDefault();if(this.options.la){var b=this;a=d(a.currentTarget);var c=a.closest(".template-upload"),e=c.data("data"),f=a.data().index;this.options.la(e.files[f]).then(function(g){g&&(e.files[f]=g,e.context.s("processing"),c.find(".edit,.start").c("disabled",
-!0),d(b.element).F("process",e).ha(function(){c.find(".size").text(b.j(e.files[f].size));e.context.H("processing");b.K(e)}).done(function(){c.find(".edit,.start").c("disabled",!1)}).D(function(){c.find(".edit").c("disabled",!1);var h=e.files[f].error;h&&c.find(".error").text(h)}))})}},ga:function(a){a.preventDefault();a=d(a.currentTarget);var b=a.closest(".template-upload").data("data");a.c("disabled",!0);b&&b.submit&&b.submit()},U:function(a){a.preventDefault();var b=d(a.currentTarget).closest(".template-upload,.template-download"),
-c=b.data("data")||{};c.context=c.context||b;c.abort?c.abort():(c.C="abort",this.a("fail",a,c))},V:function(a){a.preventDefault();var b=d(a.currentTarget);this.a("destroy",a,d.extend({context:b.closest(".template-download"),type:"DELETE"},b.data()))},ta:function(a){return d.m.transition&&a.length&&a[0].offsetWidth},f:function(a){var b=d.T();d.m.transition&&a.Fa("fade")&&a.is(":visible")?a.bind(d.m.transition.end,function(c){c.target===a[0]&&(a.Qa(d.m.transition.end),b.na(a))}).pa("in"):(a.pa("in"),
-b.na(a));return b},ca:function(){var a=this.element.find(".fileupload-buttonbar"),b=this.options.b;this.o(a.find(".start"),{click:function(c){c.preventDefault();b.find(".start").click()}});this.o(a.find(".cancel"),{click:function(c){c.preventDefault();b.find(".cancel").click()}});this.o(a.find(".delete"),{click:function(c){c.preventDefault();b.find(".toggle:checked").closest(".template-download").find(".delete").click();a.find(".toggle").c("checked",!1)}});this.o(a.find(".toggle"),{Aa:function(c){b.find(".toggle").c("checked",
-d(c.currentTarget).is(":checked"))}})},W:function(){this.J(this.element.find(".fileupload-buttonbar").find(".start, .cancel, .delete"),"click");this.J(this.element.find(".fileupload-buttonbar .toggle"),"change.")},va:function(){this.l();this.o(this.options.b,{"click .edit":this.X,"click .start":this.ga,"click .cancel":this.U,"click .delete":this.V});this.ca()},sa:function(){this.W();this.J(this.options.b,"click");this.l()},Z:function(){this.element.find(".fileinput-button input").c("disabled",!1).parent().H("disabled")},
-I:function(){this.element.find(".fileinput-button input").c("disabled",!0).parent().s("disabled")},ea:function(){var a=this.options;a.oa=this.document[0].createElement(a.b.c("nodeName"));l&&(a.S&&(a.qa=l(a.S)),a.O&&(a.ka=l(a.O)))},da:function(){var a=this.options;void 0===a.b?a.b=this.element.find(".files"):a.b instanceof d||(a.b=d(a.b))},wa:function(){this.l();this.da();this.ea()},ra:function(){this.l();this.N();d.m.Ca||this.I()},enable:function(){var a=!1;this.options.disabled&&(a=!0);this.l();
-a&&(this.element.find("input, button").c("disabled",!1),this.Z())},disable:function(){this.options.disabled||(this.element.find("input, button").c("disabled",!0),this.I());this.l()}})}
-"function"===typeof define&&define.za?define("jquery blueimp-tmpl ./jquery.fileupload-image ./jquery.fileupload-audio ./jquery.fileupload-video ./jquery.fileupload-validate".split(" "),k):"object"===typeof exports?k(require("jquery"),require("blueimp-tmpl"),require("./jquery.fileupload-image"),require("./jquery.fileupload-audio"),require("./jquery.fileupload-video"),require("./jquery.fileupload-validate")):k(window.Ha,window.Pa);
+/*
+ * jQuery File Upload User Interface Plugin
+ * https://github.com/blueimp/jQuery-File-Upload
+ *
+ * Copyright 2010, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * https://opensource.org/licenses/MIT
+ */
+
+/* global define, require */
+
+(function(factory) {
+  'use strict';
+  if (typeof define === 'function' && define.amd) {
+    // Register as an anonymous AMD module:
+    define([
+      'jquery',
+      'blueimp-tmpl',
+      './jquery.fileupload-image',
+      './jquery.fileupload-audio',
+      './jquery.fileupload-video',
+      './jquery.fileupload-validate'
+    ], factory);
+  } else if (typeof exports === 'object') {
+    // Node/CommonJS:
+    factory(
+      require('jquery'),
+      require('blueimp-tmpl'),
+      require('./jquery.fileupload-image'),
+      require('./jquery.fileupload-audio'),
+      require('./jquery.fileupload-video'),
+      require('./jquery.fileupload-validate')
+    );
+  } else {
+    // Browser globals:
+    factory(window.jQuery, window.tmpl);
+  }
+})(function($, tmpl) {
+  'use strict';
+
+  $.blueimp.fileupload.prototype._specialOptions.push(
+    'filesContainer',
+    'uploadTemplateId',
+    'downloadTemplateId'
+  );
+
+  // The UI version extends the file upload widget
+  // and adds complete user interface interaction:
+  $.widget('blueimp.fileupload', $.blueimp.fileupload, {
+    options: {
+      // By default, files added to the widget are uploaded as soon
+      // as the user clicks on the start buttons. To enable automatic
+      // uploads, set the following option to true:
+      autoUpload: false,
+      // The ID of the upload template:
+      uploadTemplateId: 'template-upload',
+      // The ID of the download template:
+      downloadTemplateId: 'template-download',
+      // The container for the list of files. If undefined, it is set to
+      // an element with class "files" inside of the widget element:
+      filesContainer: undefined,
+      // By default, files are appended to the files container.
+      // Set the following option to true, to prepend files instead:
+      prependFiles: false,
+      // The expected data type of the upload response, sets the dataType
+      // option of the $.ajax upload requests:
+      dataType: 'json',
+
+      // Error and info messages:
+      messages: {
+        unknownError: ' GREŠKA, OBRATI SE NASTAVNIKU !' //'Unknown error'
+      },
+
+      // Function returning the current number of files,
+      // used by the maxNumberOfFiles validation:
+      getNumberOfFiles: function() {
+        return this.filesContainer.children().not('.processing').length;
+      },
+
+      // Callback to retrieve the list of files from the server response:
+      getFilesFromResponse: function(data) {
+        if (data.result && $.isArray(data.result.files)) {
+          return data.result.files;
+        }
+        return [];
+      },
+
+      // The add callback is invoked as soon as files are added to the fileupload
+      // widget (via file input selection, drag & drop or add API call).
+      // See the basic file upload widget for more information:
+      add: function(e, data) {
+        if (e.isDefaultPrevented()) {
+          return false;
+        }
+        var $this = $(this),
+          that = $this.data('blueimp-fileupload') || $this.data('fileupload'),
+          options = that.options;
+        data.context = that
+          ._renderUpload(data.files)
+          .data('data', data)
+          .addClass('processing');
+        options.filesContainer[options.prependFiles ? 'prepend' : 'append'](
+          data.context
+        );
+        that._forceReflow(data.context);
+        that._transition(data.context);
+        data
+          .process(function() {
+            return $this.fileupload('process', data);
+          })
+          .always(function() {
+            data.context
+              .each(function(index) {
+                $(this)
+                  .find('.size')
+                  .text(that._formatFileSize(data.files[index].size));
+              })
+              .removeClass('processing');
+            that._renderPreviews(data);
+          })
+          .done(function() {
+            data.context.find('.edit,.start').prop('disabled', false);
+            if (
+              that._trigger('added', e, data) !== false &&
+              (options.autoUpload || data.autoUpload) &&
+              data.autoUpload !== false
+            ) {
+              data.submit();
+            }
+          })
+          .fail(function() {
+            if (data.files.error) {
+              data.context.each(function(index) {
+                var error = data.files[index].error;
+                if (error) {
+                  $(this)
+                    .find('.error')
+                    .text(error);
+                }
+              });
+            }
+          });
+      },
+      // Callback for the start of each file upload request:
+      send: function(e, data) {
+        if (e.isDefaultPrevented()) {
+          return false;
+        }
+        var that =
+          $(this).data('blueimp-fileupload') || $(this).data('fileupload');
+        if (
+          data.context &&
+          data.dataType &&
+          data.dataType.substr(0, 6) === 'iframe'
+        ) {
+          // Iframe Transport does not support progress events.
+          // In lack of an indeterminate progress bar, we set
+          // the progress to 100%, showing the full animated bar:
+          data.context
+            .find('.progress')
+            .addClass(!$.support.transition && 'progress-animated')
+            .attr('aria-valuenow', 100)
+            .children()
+            .first()
+            .css('width', '100%');
+        }
+        return that._trigger('sent', e, data);
+      },
+      // Callback for successful uploads:
+      done: function(e, data) {
+        if (e.isDefaultPrevented()) {
+          return false;
+        }
+        var that =
+            $(this).data('blueimp-fileupload') || $(this).data('fileupload'),
+          getFilesFromResponse =
+            data.getFilesFromResponse || that.options.getFilesFromResponse,
+          files = getFilesFromResponse(data),
+          template,
+          deferred;
+        if (data.context) {
+          data.context.each(function(index) {
+            var file = files[index] || { error: 'Empty file upload result' };
+            deferred = that._addFinishedDeferreds();
+            that._transition($(this)).done(function() {
+              var node = $(this);
+              template = that._renderDownload([file]).replaceAll(node);
+              that._forceReflow(template);
+              that._transition(template).done(function() {
+                data.context = $(this);
+                that._trigger('completed', e, data);
+                that._trigger('finished', e, data);
+                deferred.resolve();
+              });
+            });
+          });
+        } else {
+          template = that
+            ._renderDownload(files)
+            [that.options.prependFiles ? 'prependTo' : 'appendTo'](
+              that.options.filesContainer
+            );
+          that._forceReflow(template);
+          deferred = that._addFinishedDeferreds();
+          that._transition(template).done(function() {
+            data.context = $(this);
+            that._trigger('completed', e, data);
+            that._trigger('finished', e, data);
+            deferred.resolve();
+          });
+        }
+      },
+      // Callback for failed (abort or error) uploads:
+      fail: function(e, data) {
+        if (e.isDefaultPrevented()) {
+          return false;
+        }
+        var that =
+            $(this).data('blueimp-fileupload') || $(this).data('fileupload'),
+          template,
+          deferred;
+        if (data.context) {
+          data.context.each(function(index) {
+            if (data.errorThrown !== 'abort') {
+              var file = data.files[index];
+              file.error =
+                file.error || data.errorThrown || data.i18n('unknownError');
+              deferred = that._addFinishedDeferreds();
+              that._transition($(this)).done(function() {
+                var node = $(this);
+                template = that._renderDownload([file]).replaceAll(node);
+                that._forceReflow(template);
+                that._transition(template).done(function() {
+                  data.context = $(this);
+                  that._trigger('failed', e, data);
+                  that._trigger('finished', e, data);
+                  deferred.resolve();
+                });
+              });
+            } else {
+              deferred = that._addFinishedDeferreds();
+              that._transition($(this)).done(function() {
+                $(this).remove();
+                that._trigger('failed', e, data);
+                that._trigger('finished', e, data);
+                deferred.resolve();
+              });
+            }
+          });
+        } else if (data.errorThrown !== 'abort') {
+          data.context = that
+            ._renderUpload(data.files)
+            [that.options.prependFiles ? 'prependTo' : 'appendTo'](
+              that.options.filesContainer
+            )
+            .data('data', data);
+          that._forceReflow(data.context);
+          deferred = that._addFinishedDeferreds();
+          that._transition(data.context).done(function() {
+            data.context = $(this);
+            that._trigger('failed', e, data);
+            that._trigger('finished', e, data);
+            deferred.resolve();
+          });
+        } else {
+          that._trigger('failed', e, data);
+          that._trigger('finished', e, data);
+          that._addFinishedDeferreds().resolve();
+        }
+      },
+      // Callback for upload progress events:
+      progress: function(e, data) {
+        if (e.isDefaultPrevented()) {
+          return false;
+        }
+        var progress = Math.floor((data.loaded / data.total) * 100);
+        if (data.context) {
+          data.context.each(function() {
+            $(this)
+              .find('.progress')
+              .attr('aria-valuenow', progress)
+              .children()
+              .first()
+              .css('width', progress + '%');
+          });
+        }
+      },
+      // Callback for global upload progress events:
+      progressall: function(e, data) {
+        if (e.isDefaultPrevented()) {
+          return false;
+        }
+        var $this = $(this),
+          progress = Math.floor((data.loaded / data.total) * 100),
+          globalProgressNode = $this.find('.fileupload-progress'),
+          extendedProgressNode = globalProgressNode.find('.progress-extended');
+        if (extendedProgressNode.length) {
+          extendedProgressNode.html(
+            (
+              $this.data('blueimp-fileupload') || $this.data('fileupload')
+            )._renderExtendedProgress(data)
+          );
+        }
+        globalProgressNode
+          .find('.progress')
+          .attr('aria-valuenow', progress)
+          .children()
+          .first()
+          .css('width', progress + '%');
+      },
+      // Callback for uploads start, equivalent to the global ajaxStart event:
+      start: function(e) {
+        if (e.isDefaultPrevented()) {
+          return false;
+        }
+        var that =
+          $(this).data('blueimp-fileupload') || $(this).data('fileupload');
+        that._resetFinishedDeferreds();
+        that._transition($(this).find('.fileupload-progress')).done(function() {
+          that._trigger('started', e);
+        });
+      },
+      // Callback for uploads stop, equivalent to the global ajaxStop event:
+      stop: function(e) {
+        if (e.isDefaultPrevented()) {
+          return false;
+        }
+        var that =
+            $(this).data('blueimp-fileupload') || $(this).data('fileupload'),
+          deferred = that._addFinishedDeferreds();
+        $.when.apply($, that._getFinishedDeferreds()).done(function() {
+          that._trigger('stopped', e);
+        });
+        that._transition($(this).find('.fileupload-progress')).done(function() {
+          $(this)
+            .find('.progress')
+            .attr('aria-valuenow', '0')
+            .children()
+            .first()
+            .css('width', '0%');
+          $(this)
+            .find('.progress-extended')
+            .html('&nbsp;');
+          deferred.resolve();
+        });
+      },
+      processstart: function(e) {
+        if (e.isDefaultPrevented()) {
+          return false;
+        }
+        $(this).addClass('fileupload-processing');
+      },
+      processstop: function(e) {
+        if (e.isDefaultPrevented()) {
+          return false;
+        }
+        $(this).removeClass('fileupload-processing');
+      },
+      // Callback for file deletion:
+      destroy: function(e, data) {
+        if (e.isDefaultPrevented()) {
+          return false;
+        }
+        var that =
+            $(this).data('blueimp-fileupload') || $(this).data('fileupload'),
+          removeNode = function() {
+            that._transition(data.context).done(function() {
+              $(this).remove();
+              that._trigger('destroyed', e, data);
+            });
+          };
+        if (data.url) {
+          data.dataType = data.dataType || that.options.dataType;
+          $.ajax(data)
+            .done(removeNode)
+            .fail(function() {
+              that._trigger('destroyfailed', e, data);
+            });
+        } else {
+          removeNode();
+        }
+      }
+    },
+
+    _resetFinishedDeferreds: function() {
+      this._finishedUploads = [];
+    },
+
+    _addFinishedDeferreds: function(deferred) {
+      // eslint-disable-next-line new-cap
+      var promise = deferred || $.Deferred();
+      this._finishedUploads.push(promise);
+      return promise;
+    },
+
+    _getFinishedDeferreds: function() {
+      return this._finishedUploads;
+    },
+
+    // Link handler, that allows to download files
+    // by drag & drop of the links to the desktop:
+    _enableDragToDesktop: function() {
+      var link = $(this),
+        url = link.prop('href'),
+        name = link.prop('download'),
+        type = 'application/octet-stream';
+      link.bind('dragstart', function(e) {
+        try {
+          e.originalEvent.dataTransfer.setData(
+            'DownloadURL',
+            [type, name, url].join(':')
+          );
+        } catch (ignore) {
+          // Ignore exceptions
+        }
+      });
+    },
+
+    _formatFileSize: function(bytes) {
+      if (typeof bytes !== 'number') {
+        return '';
+      }
+      if (bytes >= 1000000000) {
+        return (bytes / 1000000000).toFixed(2) + ' GB';
+      }
+      if (bytes >= 1000000) {
+        return (bytes / 1000000).toFixed(2) + ' MB';
+      }
+      return (bytes / 1000).toFixed(2) + ' KB';
+    },
+
+    _formatBitrate: function(bits) {
+      if (typeof bits !== 'number') {
+        return '';
+      }
+      if (bits >= 1000000000) {
+        return (bits / 1000000000).toFixed(2) + ' Gbit/s';
+      }
+      if (bits >= 1000000) {
+        return (bits / 1000000).toFixed(2) + ' Mbit/s';
+      }
+      if (bits >= 1000) {
+        return (bits / 1000).toFixed(2) + ' kbit/s';
+      }
+      return bits.toFixed(2) + ' bit/s';
+    },
+
+    _formatTime: function(seconds) {
+      var date = new Date(seconds * 1000),
+        days = Math.floor(seconds / 86400);
+      days = days ? days + 'd ' : '';
+      return (
+        days +
+        ('0' + date.getUTCHours()).slice(-2) +
+        ':' +
+        ('0' + date.getUTCMinutes()).slice(-2) +
+        ':' +
+        ('0' + date.getUTCSeconds()).slice(-2)
+      );
+    },
+
+    _formatPercentage: function(floatValue) {
+      return (floatValue * 100).toFixed(2) + ' %';
+    },
+
+    _renderExtendedProgress: function(data) {
+      return (
+        this._formatBitrate(data.bitrate) +
+        ' | ' +
+        this._formatTime(((data.total - data.loaded) * 8) / data.bitrate) +
+        ' | ' +
+        this._formatPercentage(data.loaded / data.total) +
+        ' | ' +
+        this._formatFileSize(data.loaded) +
+        ' / ' +
+        this._formatFileSize(data.total)
+      );
+    },
+
+    _renderTemplate: function(func, files) {
+      if (!func) {
+        return $();
+      }
+      var result = func({
+        files: files,
+        formatFileSize: this._formatFileSize,
+        options: this.options
+      });
+      if (result instanceof $) {
+        return result;
+      }
+      return $(this.options.templatesContainer)
+        .html(result)
+        .children();
+    },
+
+    _renderPreviews: function(data) {
+      data.context.find('.preview').each(function(index, elm) {
+        $(elm)
+          .empty()
+          .append(data.files[index].preview);
+      });
+    },
+
+    _renderUpload: function(files) {
+      return this._renderTemplate(this.options.uploadTemplate, files);
+    },
+
+    _renderDownload: function(files) {
+      return this._renderTemplate(this.options.downloadTemplate, files)
+        .find('a[download]')
+        .each(this._enableDragToDesktop)
+        .end();
+    },
+
+    _editHandler: function(e) {
+      e.preventDefault();
+      if (!this.options.edit) return;
+      var that = this,
+        button = $(e.currentTarget),
+        template = button.closest('.template-upload'),
+        data = template.data('data'),
+        index = button.data().index;
+      this.options.edit(data.files[index]).then(function(file) {
+        if (!file) return;
+        data.files[index] = file;
+        data.context.addClass('processing');
+        template.find('.edit,.start').prop('disabled', true);
+        $(that.element)
+          .fileupload('process', data)
+          .always(function() {
+            template
+              .find('.size')
+              .text(that._formatFileSize(data.files[index].size));
+            data.context.removeClass('processing');
+            that._renderPreviews(data);
+          })
+          .done(function() {
+            template.find('.edit,.start').prop('disabled', false);
+          })
+          .fail(function() {
+            template.find('.edit').prop('disabled', false);
+            var error = data.files[index].error;
+            if (error) {
+              template.find('.error').text(error);
+            }
+          });
+      });
+    },
+
+    _startHandler: function(e) {
+      e.preventDefault();
+      var button = $(e.currentTarget),
+        template = button.closest('.template-upload'),
+        data = template.data('data');
+      button.prop('disabled', true);
+      if (data && data.submit) {
+        data.submit();
+      }
+    },
+
+    _cancelHandler: function(e) {
+      e.preventDefault();
+      var template = $(e.currentTarget).closest(
+          '.template-upload,.template-download'
+        ),
+        data = template.data('data') || {};
+      data.context = data.context || template;
+      if (data.abort) {
+        data.abort();
+      } else {
+        data.errorThrown = 'abort';
+        this._trigger('fail', e, data);
+      }
+    },
+
+    _deleteHandler: function(e) {
+      e.preventDefault();
+      var button = $(e.currentTarget);
+      this._trigger(
+        'destroy',
+        e,
+        $.extend(
+          {
+            context: button.closest('.template-download'),
+            type: 'DELETE'
+          },
+          button.data()
+        )
+      );
+    },
+
+    _forceReflow: function(node) {
+      return $.support.transition && node.length && node[0].offsetWidth;
+    },
+
+    _transition: function(node) {
+      // eslint-disable-next-line new-cap
+      var dfd = $.Deferred();
+      if (
+        $.support.transition &&
+        node.hasClass('fade') &&
+        node.is(':visible')
+      ) {
+        node
+          .bind($.support.transition.end, function(e) {
+            // Make sure we don't respond to other transitions events
+            // in the container element, e.g. from button elements:
+            if (e.target === node[0]) {
+              node.unbind($.support.transition.end);
+              dfd.resolveWith(node);
+            }
+          })
+          .toggleClass('in');
+      } else {
+        node.toggleClass('in');
+        dfd.resolveWith(node);
+      }
+      return dfd;
+    },
+
+    _initButtonBarEventHandlers: function() {
+      var fileUploadButtonBar = this.element.find('.fileupload-buttonbar'),
+        filesList = this.options.filesContainer;
+      this._on(fileUploadButtonBar.find('.start'), {
+        click: function(e) {
+          e.preventDefault();
+          filesList.find('.start').click();
+        }
+      });
+      this._on(fileUploadButtonBar.find('.cancel'), {
+        click: function(e) {
+          e.preventDefault();
+          filesList.find('.cancel').click();
+        }
+      });
+      this._on(fileUploadButtonBar.find('.delete'), {
+        click: function(e) {
+          e.preventDefault();
+          filesList
+            .find('.toggle:checked')
+            .closest('.template-download')
+            .find('.delete')
+            .click();
+          fileUploadButtonBar.find('.toggle').prop('checked', false);
+        }
+      });
+      this._on(fileUploadButtonBar.find('.toggle'), {
+        change: function(e) {
+          filesList
+            .find('.toggle')
+            .prop('checked', $(e.currentTarget).is(':checked'));
+        }
+      });
+    },
+
+    _destroyButtonBarEventHandlers: function() {
+      this._off(
+        this.element
+          .find('.fileupload-buttonbar')
+          .find('.start, .cancel, .delete'),
+        'click'
+      );
+      this._off(this.element.find('.fileupload-buttonbar .toggle'), 'change.');
+    },
+
+    _initEventHandlers: function() {
+      this._super();
+      this._on(this.options.filesContainer, {
+        'click .edit': this._editHandler,
+        'click .start': this._startHandler,
+        'click .cancel': this._cancelHandler,
+        'click .delete': this._deleteHandler
+      });
+      this._initButtonBarEventHandlers();
+    },
+
+    _destroyEventHandlers: function() {
+      this._destroyButtonBarEventHandlers();
+      this._off(this.options.filesContainer, 'click');
+      this._super();
+    },
+
+    _enableFileInputButton: function() {
+      this.element
+        .find('.fileinput-button input')
+        .prop('disabled', false)
+        .parent()
+        .removeClass('disabled');
+    },
+
+    _disableFileInputButton: function() {
+      this.element
+        .find('.fileinput-button input')
+        .prop('disabled', true)
+        .parent()
+        .addClass('disabled');
+    },
+
+    _initTemplates: function() {
+      var options = this.options;
+      options.templatesContainer = this.document[0].createElement(
+        options.filesContainer.prop('nodeName')
+      );
+      if (tmpl) {
+        if (options.uploadTemplateId) {
+          options.uploadTemplate = tmpl(options.uploadTemplateId);
+        }
+        if (options.downloadTemplateId) {
+          options.downloadTemplate = tmpl(options.downloadTemplateId);
+        }
+      }
+    },
+
+    _initFilesContainer: function() {
+      var options = this.options;
+      if (options.filesContainer === undefined) {
+        options.filesContainer = this.element.find('.files');
+      } else if (!(options.filesContainer instanceof $)) {
+        options.filesContainer = $(options.filesContainer);
+      }
+    },
+
+    _initSpecialOptions: function() {
+      this._super();
+      this._initFilesContainer();
+      this._initTemplates();
+    },
+
+    _create: function() {
+      this._super();
+      this._resetFinishedDeferreds();
+      if (!$.support.fileInput) {
+        this._disableFileInputButton();
+      }
+    },
+
+    enable: function() {
+      var wasDisabled = false;
+      if (this.options.disabled) {
+        wasDisabled = true;
+      }
+      this._super();
+      if (wasDisabled) {
+        this.element.find('input, button').prop('disabled', false);
+        this._enableFileInputButton();
+      }
+    },
+
+    disable: function() {
+      if (!this.options.disabled) {
+        this.element.find('input, button').prop('disabled', true);
+        this._disableFileInputButton();
+      }
+      this._super();
+    }
+  });
+});
