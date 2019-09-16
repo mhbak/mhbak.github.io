@@ -48,7 +48,7 @@ php_value display_errors 1
 # | Web fonts access                                                           |
 # ------------------------------------------------------------------------------
 
-# Allow access from all domains for web fonts
+# Allow access from all domains for web fonts.
 
 <IfModule mod_headers.c>
     <FilesMatch "\.(eot|font.css|otf|ttc|ttf|woff)$">
