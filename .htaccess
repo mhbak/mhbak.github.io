@@ -48,7 +48,7 @@ php_value display_errors 1
 # | Web fonts access                                                           |
 # ------------------------------------------------------------------------------
 
-# Allow access from all domains for web fonts.
+# Allow access from all domains for web fonts
 
 <IfModule mod_headers.c>
     <FilesMatch "\.(eot|font.css|otf|ttc|ttf|woff)$">
@@ -60,6 +60,26 @@ php_value display_errors 1
 # ##############################################################################
 # # ERRORS                                                                     #
 # ##############################################################################
+
+# ------------------------------------------------------------------------------
+# | Redirect a single page                                                     |
+# ------------------------------------------------------------------------------
+
+# OVE 2 LINIJE DOLE NE RADE - NE ZNAM ZASTO:
+# Redirect 301 /Upl.html https://docs.google.com/forms/d/e/1FAIpQLScgfPeKSyD2aLfFANuATo4jQxQfv06IZa6glFXOy7u65WEpGA/viewform
+Redirect 301 Upl.html https://mhbak.000webhostapp.com/Upl.html
+
+# ------------------------------------------------------------------------------
+# | Redirect an entire site to another site                                    |
+# ------------------------------------------------------------------------------
+
+# Redirect 301 / https://mhbak.000webhostapp.com/
+# Redirect 301 / http://mhbak.byethost31.com/
+# Redirect 301 / https://mhbak.github.io/
+
+# Redirect 301 / https://shbri.000webhostapp.com/
+# Redirect 301 / http://shbri.byethost13.com/
+# Redirect 301 / https://shbri.github.io/
 
 # ------------------------------------------------------------------------------
 # | 404 error prevention for non-existing redirected folders                   |
