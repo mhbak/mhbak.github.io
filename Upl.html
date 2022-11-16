@@ -1,28 +1,341 @@
-﻿<!DOCTYPE html><html lang=en dir=ltr><head><title>M.Hess - Upload</title><meta charset=iso-8859-1><meta name=robots content=noindex><meta name=viewport content="width=device-width, initial-scale=1.0"><meta name=description content="File Upload widget with multiple file selection, drag&amp;drop support, progress bars, validation and preview images, audio and video for jQuery. Supports cross-domain, chunked and resumable file uploads and client-side image resizing. Works with any server-side platform (PHP, Python, Ruby on Rails, Java, Node.js, Go etc.) that supports standard HTML form file uploads."><meta name=viewport content="width=device-width, initial-scale=1.0"><!--[if IE]><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><![endif]--><link rel=stylesheet href=css/bootstrap.css><link rel=stylesheet href=css/jquery.fileupload.css><link rel=stylesheet href=css/jquery.fileupload-ui.css><link href=styles/main.css rel=stylesheet media=all><style>.row1{background:url(styles/images/wall/h9.jpg) no-repeat center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;-ms-background-size:cover;background-size:cover}.row3{background:url(styles/images/wall/bg11.jpg) no-repeat center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;-ms-background-size:cover;background-size:cover}.row7{background:url(styles/images/wall/f9.jpg) no-repeat center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;-ms-background-size:cover;background-size:cover}</style><noscript><style>body{opacity:1}.row3{background:url(styles/images/wall/bg.jpg) no-repeat center center fixed;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;-ms-background-size:cover;background-size:cover}.row1{background:url(images/Venus.gif),url(styles/images/wall/h.jpg);background-size:auto,cover;-webkit-background-size:auto,cover;-moz-background-size:auto,cover;-o-background-size:auto,cover;-ms-background-size:auto,cover;background-repeat:no-repeat,no-repeat;background-position:35% center,center}.row7{background:url(styles/images/wall/f.jpg) no-repeat center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;-ms-background-size:cover;background-size:cover}</style></noscript><link rel="shortcut icon" href=styles/images/favicon.ico><noscript><link rel=stylesheet href=css/jquery.fileupload-noscript.css></noscript><noscript><link rel=stylesheet href=css/jquery.fileupload-ui-noscript.css></noscript><!--[if lt IE 9]><link href=styles/ie/ie8.css rel=stylesheet media=all><script src=scripts/ie/css3-mediaqueries.min.js></script><script src=scripts/ie/html5shiv.min.js></script><![endif]--><script>function beginneon(){if(document.all||document.getElementById)
-flashing=setInterval("neon()",flashspeed)}
-function neon(){if(n==0){for(m=0;m<message.length;m++)
-crossref(m).style.color=neonbasecolor}
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>M.Hess - Upload</title>
+<meta charset="iso-8859-1">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="File Upload widget with multiple file selection, drag&amp;drop support, progress bars, validation and preview images, audio and video for jQuery. Supports cross-domain, chunked and resumable file uploads and client-side image resizing. Works with any server-side platform (PHP, Python, Ruby on Rails, Java, Node.js, Go etc.) that supports standard HTML form file uploads.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- REDIRECT ZA GITHUB: Upl.html na google form -  jer na Githubu file upload widget ne radi :::: -->
+<!-- <script>window.location = "https://docs.google.com/forms/d/e/1FAIpQLScgfPeKSyD2aLfFANuATo4jQxQfv06IZa6glFXOy7u65WEpGA/viewform";</script> -->
+
+<!-- Force latest IE rendering engine or ChromeFrame if installed -->
+<!--[if IE]>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<![endif]-->
+
+<!-- Bootstrap styles -->
+<!-- <link -->
+  <!-- rel="stylesheet" -->
+  <!-- href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" -->
+  <!-- integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" -->
+  <!-- crossorigin="anonymous" -->
+<!-- /> -->
+<link rel="stylesheet" href="css/bootstrap.css" />
+<!-- blueimp Gallery styles -->
+<!-- <link rel="stylesheet" href="css/blueimp-gallery.min.css" /> -->
+<!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
+<link rel="stylesheet" href="css/jquery.fileupload.css" />
+<link rel="stylesheet" href="css/jquery.fileupload-ui.css" />
+
+<link href="styles/main.css" rel="stylesheet" type="text/css" media="all">
+<style>
+.row1 {background: url(styles/images/wall/h9.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; -ms-background-size: cover; background-size: cover;}
+.row3 {background: url(styles/images/wall/bg11.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; -ms-background-size: cover; background-size: cover;}
+.row7 {background: url(styles/images/wall/f9.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; -ms-background-size: cover; background-size: cover;}
+</style>
+<noscript>
+<style>
+body{opacity:1;}
+.row3 {background: url(styles/images/wall/bg.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; -ms-background-size: cover; background-size: cover;}
+.row1{
+	background: url(images/Venus.gif), url(styles/images/wall/h.jpg);		
+	background-size: auto, cover;
+  -webkit-background-size: auto, cover;
+  -moz-background-size: auto, cover;
+  -o-background-size: auto, cover;
+  -ms-background-size: auto, cover;
+	background-repeat: no-repeat, no-repeat;						
+	background-position: 35% center, center;
+}
+.row7 {background: url(styles/images/wall/f.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; -ms-background-size: cover; background-size: cover;}
+</style>
+</noscript>
+<link rel="shortcut icon" href="styles/images/favicon.ico">
+
+<!-- CSS adjustments for browsers with JavaScript disabled -->
+<noscript
+  ><link rel="stylesheet" href="css/jquery.fileupload-noscript.css"
+/></noscript>
+<noscript
+  ><link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css"
+/></noscript>
+	
+<!--[if lt IE 9]>
+<link href="styles/ie/ie8.css" rel="stylesheet" type="text/css" media="all">
+<script src="scripts/ie/css3-mediaqueries.min.js"></script>
+<script src="scripts/ie/html5shiv.min.js"></script>
+<![endif]-->
+<script>
+/*!
+* Various functions for Neon text effect
+*/
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+function neon(){
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message.length;m++)
+//eval("document.all.neonlight"+m).style.color=neonbasecolor
+crossref(m).style.color=neonbasecolor
+}
+//cycle through and change individual letters to neon color
 crossref(n).style.color=neontextcolor
-if(n<message.length-1)
+if (n<message.length-1)
 n++
-else{n=0
+else{
+n=0
 clearInterval(flashing)
 setTimeout("beginneon()",3500)
-return}}
-function crossref(number){var crossobj=document.all?eval("document.all.neonlight"+number):document.getElementById("neonlight"+number)
-return crossobj}</script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-20331217-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-20331217-1');</script><body><div id=loading><div id=loading-center><div id=loading-center-absolute-one><div class=object-one></div><div class=object-one></div><div class=object-one></div><div class=object-one></div><div class=object-one></div><div class=object-one></div><div class=object-one></div><div class=object-one></div><div class=object-one></div></div><div id=loading-center-absolute-two><div class=object-two></div><div class=object-two></div><div class=object-two></div><div class=object-two></div><div class=object-two></div><div class=object-two></div><div class=object-two></div><div class=object-two></div><div class=object-two></div></div></div></div><script>document.getElementById("loading").style.display="block";</script><div class="wrapper row1 aniRow1"><header id=header class="full_width clear"><hgroup><h1><a href=index.html>dr.sc. Mirano Hess</a></h1><h2>Pomorski fakultet u Rijeci</h2></hgroup><div id=header-contact class=rnd5><ul class="list none"><li>Kabinet 426, konzultacije: 08-12,<br>uz prethodni dogovor emailom</li><a name=anchVrh></a></ul></div></header></div><div class=slickm><div class="wrapper row2"><nav id=topnav><ul class=clear><li><a href=index.html>Naslovnica</a><li><a class=drop>Kolegiji</a><ul><li><a href=Oru.html>Organizacija rada i upravljanje na brodu</a><li><a href=Pb.html>Plovidba broda</a><li><a href=Pub.html>Poslovanje u brodarstvu</a><li><a href=Up.html>Ugovaranje u pomorstvu</a><li><a href=Uop.html>Upravljanje obalnim područjem</a><li><a href=Opb.html>Optimizacija poslovanja u brodarstvu</a></ul><li><a href=Ispiti.html>Ispiti</a><li><a class=drop>Seminari i zadaci</a><ul><li><a href=Sem.html>Seminari</a><li><a href=Zad.html>Radni zadaci</a><li><a href=Pre.html>Prezentacije gradiva</a></ul><li class="active last-child"><a class=drop>Razno</a><ul><li><a href=# onclick="gateKeeper('10','DPL');return false">Diplomski i Završni rad</a><li class=active><a href=# onclick="gateKeeper('40','UPL');return false">Pošalji datoteku</a><li><a href=# onclick="gateKeeper('30','DOW');return false">Preuzmi datoteku</a><li><a href=Gal.html>Galerija</a></ul></ul></nav></div></div><div class="wrapper row3"><div id=container><div id=sidebar_1 class="sidebar one_quarter first"><aside><section><article><h1 class=altertitle>Pošalji datoteku (seminar, rad.zadatak, prezentaciju, ...)</h1><h2>Uputstva</h2><ul class="list arrow"><li>Ova strana služi za slanje gotovih Seminarskih radova, Prezentacija, Radnih zadataka te Diplomskih i Završnih radova nastavniku.<li>Klikom na dugme, odaberi datoteke (fajlove) koje želiš poslati.<li>Klikom na drugo dugme, pošalji odabrane datoteke.<li>Istovremeno se može poslati više odabranih datoteka.</ul></article></section><section><article><h2>Naziv datoteke</h2><p><strong><script>var message="Svaku datoteku koja se šalje potrebno je imenovati s šifrom vaše teme, primjerice na sljedeći način: Oru-S-12.docx, Oru-S-12.pptx, Up-S-Boxtime2004.docx, Up-S-Boxtime2004.pptx"
-var neonbasecolor="#E85533"
-var neontextcolor="black"
-var flashspeed=50
-var n=0
-if(document.all||document.getElementById){document.write('<font color="'+neonbasecolor+'">')
-for(m=0;m<message.length;m++)
-document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
-document.write('</font>')}
-else
-document.write(message)
-beginneon()</script></strong><p>Ove datoteke potrebno je, najkasnije 2 dana prije određenog / dogovorenog termina / izlaganja, poslati nastavniku putem internet strane</article></section></aside></div><div class=three_quarter><section class=clear style=min-height:346px><h1 class=maintitle>Pošalji datoteku (seminar, rad.zadatak, prezentaciju, ...)</h1><h2 class=altertitle>Pošalji datoteku:</h2><div><form id=fileupload action="server/php/" method=POST enctype=multipart/form-data><noscript><input type=hidden name=redirect value=index.html></noscript><div class="row fileupload-buttonbar"><div class=col-lg-7><span class="btn btn-success fileinput-button"> <i class="glyphicon glyphicon-plus"></i> <span>Odaberi datoteke ...</span> <input type=file name=files[] multiple> </span> <button type=submit class="btn btn-primary start"> <i class="glyphicon glyphicon-upload"></i> <span>Pošalji odabrane datoteke</span> </button>           <span class=fileupload-process></span></div><div class="col-lg-5 fileupload-progress fade"><div class="progress progress-striped active" role=progressbar aria-valuemin=0 aria-valuemax=100><div class="progress-bar progress-bar-success" style=width:0></div></div><div class=progress-extended>&nbsp;</div></div></div><table role=presentation class="table table-striped"><tbody class=files></table></form><div class="panel panel-default"><div class=panel-heading><h3>Važne napomene</h3></div><div class=panel-body><section><ul><li>Maksimalna veličina odabranih datotka za slanje zbrojeno može biti <strong>9 MB</strong>.<li>Samo datoteke oblika (<strong>doc, docx, xls, xlsx, ppt, pptx, pdf, zip, rar</strong>) se mogu poslati.<li>Možete poslati najviše <strong>5 datoteka</strong>.<li>Možete povući datoteke <strong>drag &amp; drop</strong> iz Explorera.</ul></section></div></div></div><script id=template-upload type=text/x-tmpl>
+return
+}
+}
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-20331217-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-20331217-1');
+</script>
+</head>
+<body class="">
+<div id="loading">
+<div id="loading-center">
+<div id="loading-center-absolute-one">
+<div class="object-one"></div>
+<div class="object-one"></div>
+<div class="object-one"></div>
+<div class="object-one"></div>
+<div class="object-one"></div>
+<div class="object-one"></div>
+<div class="object-one"></div>
+<div class="object-one"></div>
+<div class="object-one"></div>
+</div>
+<div id="loading-center-absolute-two">
+<div class="object-two"></div>
+<div class="object-two"></div>
+<div class="object-two"></div>
+<div class="object-two"></div>
+<div class="object-two"></div>
+<div class="object-two"></div>
+<div class="object-two"></div>
+<div class="object-two"></div>
+<div class="object-two"></div>
+</div>
+</div> 
+</div>
+<script>
+document.getElementById("loading").style.display = "block";
+</script>
+<div class="wrapper row1 aniRow1">
+  <header id="header" class="full_width clear">
+    <hgroup>
+      <h1><a href="index.html">dr.sc. Mirano Hess</a></h1>
+      <h2>Pomorski fakultet u Rijeci</h2>
+    </hgroup>
+    <div id="header-contact" class="rnd5">
+      <ul class="list none">
+        <!-- <li><span class="icon-phone"></span> Studentska ulica 2, 51000 Rijeka, tel: +385 (0)51 338 411 </li>  -->
+		<li>Kabinet 426, konzultacije: 08-12,<br>uz prethodni dogovor emailom</li>
+		<a name="anchVrh"></a>
+      </ul>
+    </div>
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<div class="slickm">
+<div class="wrapper row2">
+  <nav id="topnav">
+    <ul class="clear">
+      <li><a href="index.html" title="">Naslovnica</a></li>
+      <li><a class="drop" title="">Kolegiji</a>
+        <ul>
+          <li><a href="Oru.html" title="">Organizacija rada i upravljanje na brodu</a></li>
+          <li><a href="Pb.html" title="">Plovidba broda</a></li>
+          <li><a href="Pub.html" title="">Poslovanje u brodarstvu</a></li>
+          <li><a href="Up.html" title="">Ugovaranje u pomorstvu</a></li>
+          <li><a href="Uop.html" title="">Upravljanje obalnim područjem</a></li>
+          <li><a href="Opb.html" title="">Optimizacija poslovanja u brodarstvu</a></li>
+        </ul>
+      </li>
+      <li><a href="Ispiti.html" title="">Ispiti</a></li>
+      <li><a class="drop" title="">Seminari i zadaci</a>
+        <ul>
+          <li><a href="Sem.html" title="">Seminari</a></li>
+          <li><a href="Zad.html" title="">Radni zadaci</a></li>
+		  <li><a href="Pre.html" title="">Prezentacije gradiva</a></li>
+        </ul>
+      </li>
+		<li class="active last-child"><a class="drop" title="">Razno</a>
+			<ul>
+				<li><a href="Dpl.html" title="">Diplomski i Završni rad</a></li>
+				<!-- <li><a href="#" onclick="gateKeeper('10','DPL');return false;">Diplomski i Završni rad</a></li> -->
+				<li class="active"><a href="#" onclick="gateKeeper('40','UPL');return false;" title="">Pošalji datoteku</a></li>
+				<li><a href="#" onclick="gateKeeper('30','DOW');return false;" title="">Preuzmi datoteku</a></li>
+				<li><a href="Gal.html" title="">Galerija</a></li>
+				<!-- <li><a href="Sta.html" title="">Navigacija i Staze u okolici</a></li> -->
+			</ul>
+		</li>
+		<!-- <li class="last-child"><a href="Kon.php" title="Kontaktiraj nastavnika">Kontakt</a></li> -->
+      
+    </ul>
+  </nav>
+</div>
+</div>
+
+<!-- content -->
+<div class="wrapper row3">
+  <div id="container">
+    <!-- ################################################################################################ -->
+    <div id="sidebar_1" class="sidebar one_quarter first">
+      <aside>
+        <!-- ########################################################################################## -->
+        <!-- /section -->
+		     <section>
+          <article>
+            <h1 class="altertitle">Pošalji datoteku (seminar, rad.zadatak, prezentaciju, ...)</h1>
+			<h2>Uputstva</h2>
+            <ul class="list arrow">
+							<li>Ova strana služi za slanje gotovih Seminarskih radova, Prezentacija, Radnih zadataka te Diplomskih i Završnih radova nastavniku.</li><li>Klikom na dugme, odaberi datoteke (fajlove) koje želiš poslati.</li><li>Klikom na drugo dugme, pošalji odabrane datoteke.</li><li>Istovremeno se može poslati više odabranih datoteka.</li>
+            </ul>
+          </article>
+        </section>
+        <section>
+          <article>
+			<h2>Naziv datoteke</h2>
+            <p><strong><script>      
+						var message="Svaku datoteku koja se šalje potrebno je imenovati s šifrom vaše teme, primjerice na sljedeći način: Oru-S-12.docx, Oru-S-12.pptx, Up-S-Boxtime2004.docx, Up-S-Boxtime2004.pptx"
+						var neonbasecolor="#E85533"
+						var neontextcolor="black"
+						var flashspeed=50  //in milliseconds
+						var n=0
+						if (document.all||document.getElementById){
+						document.write('<font color="'+neonbasecolor+'">')
+						for (m=0;m<message.length;m++)
+						document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+						document.write('</font>')
+						}
+						else
+						document.write(message)
+						beginneon()
+						</script></strong></p>
+						<p>Ove datoteke potrebno je, najkasnije 2 dana prije određenog / dogovorenog termina / izlaganja, poslati nastavniku putem internet strane</p>
+          </article>
+        </section>
+        <!-- /section -->
+        <!-- ########################################################################################## -->
+      </aside>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="three_quarter">
+      <!-- <section class="clear" style="min-height:560px;"> -->
+	  <section class="clear" style="min-height:346px;">
+		<h1 class="maintitle">Pošalji datoteku (seminar, rad.zadatak, prezentaciju, ...)</h1>
+		<h2 class="altertitle">Pošalji datoteku:</h2>
+				
+				
+    <div>
+      <!-- The file upload form used as target for the file upload widget -->
+      <!-- <form -->
+        <!-- id="fileupload" -->
+        <!-- action="https://jquery-file-upload.appspot.com/" -->
+        <!-- method="POST" -->
+        <!-- enctype="multipart/form-data" -->
+      <!-- > -->
+	  <form id="fileupload" action="server/php/" method="POST" enctype="multipart/form-data">
+        <!-- Redirect browsers with JavaScript disabled to the origin page -->
+        <noscript><input type="hidden" name="redirect" value="index.html"></noscript>
+        <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+        <div class="row fileupload-buttonbar">
+          <div class="col-lg-7">
+            <!-- The fileinput-button span is used to style the file input field as button -->
+            <span class="btn btn-success fileinput-button">
+              <i class="glyphicon glyphicon-plus"></i>
+              <span>Odaberi datoteke ...</span>
+              <input type="file" name="files[]" multiple />
+            </span>
+            <button type="submit" class="btn btn-primary start">
+              <i class="glyphicon glyphicon-upload"></i>
+              <span>Pošalji odabrane datoteke</span>
+            </button>
+            <!-- <button type="reset" class="btn btn-warning cancel"> -->
+              <!-- <i class="glyphicon glyphicon-ban-circle"></i> -->
+              <!-- <span>Poništi slanje datoteka</span> -->
+            <!-- </button> -->
+            <!-- <button type="button" class="btn btn-danger delete"> -->
+              <!-- <i class="glyphicon glyphicon-trash"></i> -->
+              <!-- <span>Delete selected</span> -->
+            <!-- </button> -->
+            <!-- <input type="checkbox" class="toggle" /> -->
+            <!-- The global file processing state -->
+            <span class="fileupload-process"></span>
+          </div>
+          <!-- The global progress state -->
+          <div class="col-lg-5 fileupload-progress fade">
+            <!-- The global progress bar -->
+            <div
+              class="progress progress-striped active"
+              role="progressbar"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div
+                class="progress-bar progress-bar-success"
+                style="width:0%;"
+              ></div>
+            </div>
+            <!-- The extended global progress state -->
+            <div class="progress-extended">&nbsp;</div>
+          </div>
+        </div>
+        <!-- The table listing the files available for upload/download -->
+        <table role="presentation" class="table table-striped">
+          <tbody class="files"></tbody>
+        </table>
+      </form>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3>Važne napomene</h3>
+        </div>
+        <div class="panel-body">
+			<section>
+			
+			<ul>
+				<li>Maksimalna veličina odabranih datotka za slanje zbrojeno može biti <strong>9 MB</strong>.</li>
+				<li>Samo datoteke oblika (<strong>doc, docx, xls, xlsx, ppt, pptx, pdf, zip, rar</strong>) se mogu poslati.</li>
+				<li>Možete poslati najviše <strong>5 datoteka</strong>.</li>
+				<li>Možete povući datoteke <strong>drag &amp; drop</strong> iz Explorera.</li>
+			</ul>
+			</section>
+        </div>
+      </div>
+    </div>
+    <!-- The blueimp Gallery widget -->
+    <!-- <div -->
+      <!-- id="blueimp-gallery" -->
+      <!-- class="blueimp-gallery blueimp-gallery-controls" -->
+      <!-- data-filter=":even" -->
+    <!-- > -->
+      <!-- <div class="slides"></div> -->
+      <!-- <h3 class="title"></h3> -->
+      <!-- <a class="prev">‹</a> -->
+      <!-- <a class="next">›</a> -->
+      <!-- <a class="close">×</a> -->
+      <!-- <a class="play-pause"></a> -->
+      <!-- <ol class="indicator"></ol> -->
+    <!-- </div> -->
+    <!-- The template to display files available for upload -->
+    <script id="template-upload" type="text/x-tmpl">
       {% for (var i=0, file; file=o.files[i]; i++) { %}
           <tr class="template-upload fade">
               <!-- <td> -->
@@ -60,7 +373,9 @@ beginneon()</script></strong><p>Ove datoteke potrebno je, najkasnije 2 dana prij
               </td>
           </tr>
       {% } %}
-    </script><script id=template-download type=text/x-tmpl>
+    </script>
+    <!-- The template to display files available for download -->
+    <script id="template-download" type="text/x-tmpl">
       {% for (var i=0, file; file=o.files[i]; i++) { %}
           <tr class="template-download fade">
               <!-- <td> -->
@@ -105,5 +420,129 @@ beginneon()</script></strong><p>Ove datoteke potrebno je, najkasnije 2 dana prij
               </td>
           </tr>
       {% } %}
-    </script></section></div><div class=clear></div></div></div><div class="wrapper row7 aniRow7"><div id=footer class=clear><div class="three_quarter levogal hidepart"><h2 class=footer_title>Galerija</h2><ul id=ft_gallery class="nospace spacing clear"><div id=fscontain><li class="one_eighth hidimag first"><a href=images/61.jpg><img src=images/61t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/62.jpg><img src=images/62t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/63.jpg><img src=images/63t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/64.jpg><img src=images/64t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/65.jpg><img src=images/65t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/71.jpg><img src=images/71t.jpg alt=""></a><li class="one_eighth hidepart2"><a href=images/78.jpg><img src=images/78t.jpg alt=""></a><li class="one_eighth hidepart2"><a href=images/79.jpg><img src=images/79t.jpg alt=""></a><li class="one_eighth hidimag first"><a href=images/72.jpg><img src=images/72t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/73.jpg><img src=images/73t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/74.jpg><img src=images/74t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/75.jpg><img src=images/75t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/76.jpg><img src=images/76t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/77.jpg><img src=images/77t.jpg alt=""></a><li class="one_eighth hidepart2"><a href=images/80.jpg><img src=images/80t.jpg alt=""></a><li class="one_eighth hidepart2"><a href=images/81.jpg><img src=images/81t.jpg alt=""></a></li></div></ul></div><a name=anchPrijava></a><div class="one_quarter desnogal logon rnd5"><h2 class=footer_title>Prijava</h2><form id=formreset class=rnd5 name=prijava><div class="form-input clear"><label for=korisnik>Korisnik <span class=required>*</span><br> <input type=text name=korisnik id=korisnik size=22 onkeydown=clickEr()> </label><div id=er class=osx-err-hiden>Pogrešne šifre !</div><div id=ok class=osx-err-hiden>Uspješno ste prijavljeni ! <br> Dostupni su vam sadržaji za unešenu kombinaciju Korisnik - Zaporka.</div><label for=zaporka>Zaporka <span class=required>*</span><br> <input type=password name=zaporka id=zaporka size=22 onkeydown=clickEr()> </label></div><p><input type=submit value=Potvrdi class="button orange small gradient" onclick="submitentry();return false"> &nbsp; <input type=reset value=Odustani class="button black small gradient" onclick=clickEr()></form></div></div></div><div class="wrapper row4"><div id=copyright class=clear><p class=fl_left>Izrada i &copy; 2018 - MH - PFRI<p class=fl_right>Program BzB</div></div><script src=//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js></script><script>window.jQuery||document.write('<script src="scripts/jquery-2.1.4.min.js"><\/script>')</script><script src=//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js></script><script>window.jQuery.ui||document.write('<script src="scripts/jquery-ui.min.js"><\/script>')</script><script src=scripts/custom.js></script><script>jQuery(document).ready(function($){$('img').removeAttr('width height');});$(document).ready(function(){document.getElementById('formreset').reset();$(function(){slick();});$(function(){fullsiz();});$(function(){$(document).tooltip({track:true});});});function fader(){$("#loading").fadeOut(500);}
-document.addEventListener("DOMContentLoaded",fader());window.addEventListener("beforeunload",function(){document.body.classList.add("animate-out");});</script><script src=https://blueimp.github.io/JavaScript-Templates/js/tmpl.min.js></script><script src=https://blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js></script><script src=https://blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js></script><script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script><script src=js/jquery.iframe-transport.js></script><script src=js/jquery.fileupload.js></script><script src=js/jquery.fileupload-process.js></script><script src=js/jquery.fileupload-image.js></script><script src=js/jquery.fileupload-validate.js></script><script src=js/jquery.fileupload-ui.js></script><script src=js/main.js></script><!--[if (gte IE 8)&(lt IE 10)]><script src=js/cors/jquery.xdr-transport.js></script><![endif]-->
+    </script>
+				
+				
+				
+      </section>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- Footer -->
+<div class="wrapper row7 aniRow7">
+  <div id="footer" class="clear">
+    <div class="three_quarter levogal hidepart">
+      <h2 class="footer_title">Galerija</h2>
+      <ul id="ft_gallery" class="nospace spacing clear">
+			<div id="fscontain">
+        <li class="one_eighth hidimag first"><a href="images/61.jpg"><img src="images/61t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/62.jpg"><img src="images/62t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/63.jpg"><img src="images/63t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/64.jpg"><img src="images/64t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/65.jpg"><img src="images/65t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/71.jpg"><img src="images/71t.jpg" alt=""></a></li>
+        <li class="one_eighth hidepart2"><a href="images/78.jpg"><img src="images/78t.jpg" alt=""></a></li>
+        <li class="one_eighth hidepart2"><a href="images/79.jpg"><img src="images/79t.jpg" alt=""></a></li>
+        
+        <li class="one_eighth hidimag first"><a href="images/72.jpg"><img src="images/72t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/73.jpg"><img src="images/73t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/74.jpg"><img src="images/74t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/75.jpg"><img src="images/75t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/76.jpg"><img src="images/76t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/77.jpg"><img src="images/77t.jpg" alt=""></a></li>
+        <li class="one_eighth hidepart2"><a href="images/80.jpg"><img src="images/80t.jpg" alt=""></a></li>
+        <li class="one_eighth hidepart2"><a href="images/81.jpg"><img src="images/81t.jpg" alt=""></a></li>
+			</div>
+      </ul>
+    </div>
+		<a name="anchPrijava"></a>
+    <div class="one_quarter desnogal logon rnd5">
+      <h2 class="footer_title">Prijava</h2>
+      <form id="formreset" class="rnd5" name="prijava">
+        <div class="form-input clear">
+          <label for="korisnik">Korisnik <span class="required">*</span><br>
+            <input type="text" name="korisnik" id="korisnik" value="" size="22" onkeydown="clickEr();">
+          </label>
+			<div id="er" class="osx-err-hiden">Pogrešne šifre !</div>
+			<div id="ok" class="osx-err-hiden">Uspješno ste prijavljeni ! <br> Dostupni su vam sadržaji za unešenu kombinaciju Korisnik - Zaporka.</div>
+          <label for="zaporka">Zaporka <span class="required">*</span><br>
+            <input type="password" name="zaporka" id="zaporka" value="" size="22" onkeydown="clickEr();">
+          </label>
+        </div>
+        <p>
+          <input type="submit" value="Potvrdi" class="button orange small gradient" onClick="submitentry(); return false;">
+          &nbsp;
+          <input type="reset" value="Odustani" class="button black small gradient" onClick="clickEr();">
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="wrapper row4">
+  <div id="copyright" class="clear">
+    <p class="fl_left">Izrada i &copy; 2018 - MH - PFRI</p>
+    <p class="fl_right">Program BzB</p>
+  </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="scripts/jquery-2.1.4.min.js"><\/script>')</script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script>  window.jQuery.ui || document.write('<script src="scripts/jquery-ui.min.js"><\/script>') </script>
+<script src="scripts/custom.js"></script>
+
+<script>
+jQuery(document).ready(function($){ $('img').removeAttr('width height'); });
+$(document).ready(function() {
+	document.getElementById('formreset').reset();
+	$(function() {slick( );});
+	$(function() {fullsiz( );});
+	$(function() {$(document).tooltip({track: true});});
+});
+function fader() {$("#loading").fadeOut(500);}
+document.addEventListener("DOMContentLoaded", fader());
+window.addEventListener("beforeunload", function () {document.body.classList.add("animate-out");});
+</script>
+
+<!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+<!-- <script src="js/vendor/jquery.ui.widget.js"></script> -->
+<!-- The Templates plugin is included to render the upload/download listings -->
+<script src="https://blueimp.github.io/JavaScript-Templates/js/tmpl.min.js"></script>
+<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+<script src="https://blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
+<!-- The Canvas to Blob plugin is included for image resizing functionality -->
+<script src="https://blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
+<!-- Bootstrap JS is not required, but included for the responsive demo navigation -->
+<script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+  crossorigin="anonymous"
+></script>
+<!-- blueimp Gallery script -->
+<!-- <script src="https://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script> -->
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<script src="js/jquery.iframe-transport.js"></script>
+<!-- The basic File Upload plugin -->
+<script src="js/jquery.fileupload.js"></script>
+<!-- The File Upload processing plugin -->
+<script src="js/jquery.fileupload-process.js"></script>
+<!-- The File Upload image preview & resize plugin -->
+<script src="js/jquery.fileupload-image.js"></script>
+<!-- The File Upload audio preview plugin -->
+<!-- <script src="js/jquery.fileupload-audio.js"></script> -->
+<!-- The File Upload video preview plugin -->
+<!-- <script src="js/jquery.fileupload-video.js"></script> -->
+<!-- The File Upload validation plugin -->
+<script src="js/jquery.fileupload-validate.js"></script>
+<!-- The File Upload user interface plugin -->
+<script src="js/jquery.fileupload-ui.js"></script>
+<!-- The main application script -->
+<script src="js/main.js"></script>
+<!-- The XDomainRequest Transport is included for cross-domain file deletion for IE 8 and IE 9 -->
+<!--[if (gte IE 8)&(lt IE 10)]>
+  <script src="js/cors/jquery.xdr-transport.js"></script>
+<![endif]-->
+</body>
+</html>

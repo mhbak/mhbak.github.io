@@ -1,26 +1,700 @@
-﻿<!DOCTYPE html><html lang=en dir=ltr><head><title>M.Hess - Diplomski/Završni</title><meta charset=iso-8859-1><meta name=robots content=noindex><meta name=viewport content="width=device-width, initial-scale=1.0"><link href=styles/main.css rel=stylesheet media=all><style>.row1{background:url(styles/images/wall/h12.jpg) no-repeat center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;-ms-background-size:cover;background-size:cover}.row3{background:url(styles/images/wall/bg14.jpg) no-repeat center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;-ms-background-size:cover;background-size:cover}.row7{background:url(styles/images/wall/f12.jpg) no-repeat center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;-ms-background-size:cover;background-size:cover}</style><noscript><style>body{opacity:1}.row3{background:url(styles/images/wall/bg.jpg) no-repeat center center fixed;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;-ms-background-size:cover;background-size:cover}.row1{background:url(images/Venus.gif),url(styles/images/wall/h.jpg);background-size:auto,cover;-webkit-background-size:auto,cover;-moz-background-size:auto,cover;-o-background-size:auto,cover;-ms-background-size:auto,cover;background-repeat:no-repeat,no-repeat;background-position:35% center,center}.row7{background:url(styles/images/wall/f.jpg) no-repeat center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;-ms-background-size:cover;background-size:cover}</style></noscript><link rel="shortcut icon" href=styles/images/favicon.ico><!--[if lt IE 9]><link href=styles/ie/ie8.css rel=stylesheet media=all><script src=scripts/ie/css3-mediaqueries.min.js></script><script src=scripts/ie/html5shiv.min.js></script><![endif]--><script>function beginneon(){if(document.all||document.getElementById)
-flashing=setInterval("neon()",flashspeed)}
-function neon(){if(n==0){for(m=0;m<message.length;m++)
-crossref(m).style.color=neonbasecolor}
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>M.Hess - Diplomski/Završni</title>
+<meta charset="iso-8859-1">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="styles/main.css" rel="stylesheet" type="text/css" media="all">
+<style>
+.row1 {background: url(styles/images/wall/h12.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; -ms-background-size: cover; background-size: cover;}
+.row3 {background: url(styles/images/wall/bg14.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; -ms-background-size: cover; background-size: cover;}
+.row7 {background: url(styles/images/wall/f12.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; -ms-background-size: cover; background-size: cover;}
+</style>
+<noscript>
+<style>
+body{opacity:1;}
+.row3 {background: url(styles/images/wall/bg.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; -ms-background-size: cover; background-size: cover;}
+.row1{
+	background: url(images/Venus.gif), url(styles/images/wall/h.jpg);		
+	background-size: auto, cover;
+  -webkit-background-size: auto, cover;
+  -moz-background-size: auto, cover;
+  -o-background-size: auto, cover;
+  -ms-background-size: auto, cover;
+	background-repeat: no-repeat, no-repeat;						
+	background-position: 35% center, center;
+}
+.row7 {background: url(styles/images/wall/f.jpg) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; -ms-background-size: cover; background-size: cover;}
+</style>
+</noscript>
+<link rel="shortcut icon" href="styles/images/favicon.ico">
+<!--[if lt IE 9]>
+<link href="styles/ie/ie8.css" rel="stylesheet" type="text/css" media="all">
+<script src="scripts/ie/css3-mediaqueries.min.js"></script>
+<script src="scripts/ie/html5shiv.min.js"></script>
+<![endif]-->
+<script>
+/*!
+* Various functions for Neon text effect
+*/
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+function neon(){
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message.length;m++)
+//eval("document.all.neonlight"+m).style.color=neonbasecolor
+crossref(m).style.color=neonbasecolor
+}
+//cycle through and change individual letters to neon color
 crossref(n).style.color=neontextcolor
-if(n<message.length-1)
+if (n<message.length-1)
 n++
-else{n=0
+else{
+n=0
 clearInterval(flashing)
 setTimeout("beginneon()",3500)
-return}}
-function crossref(number){var crossobj=document.all?eval("document.all.neonlight"+number):document.getElementById("neonlight"+number)
-return crossobj}</script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-20331217-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','UA-20331217-1');</script><body><div id=loading><div id=loading-center><div id=loading-center-absolute-one><div class=object-one></div><div class=object-one></div><div class=object-one></div><div class=object-one></div><div class=object-one></div><div class=object-one></div><div class=object-one></div><div class=object-one></div><div class=object-one></div></div><div id=loading-center-absolute-two><div class=object-two></div><div class=object-two></div><div class=object-two></div><div class=object-two></div><div class=object-two></div><div class=object-two></div><div class=object-two></div><div class=object-two></div><div class=object-two></div></div></div></div><script>document.getElementById("loading").style.display="block";</script><div class="wrapper row1 aniRow1"><header id=header class="full_width clear"><hgroup><h1><a href=index.html>dr.sc. Mirano Hess</a></h1><h2>Pomorski fakultet u Rijeci</h2></hgroup><div id=header-contact class=rnd5><ul class="list none"><li>Kabinet 426, konzultacije: 08-12,<br>uz prethodni dogovor emailom</li><a name=anchVrh></a></ul></div></header></div><div class=slickm><div class="wrapper row2"><nav id=topnav><ul class=clear><li><a href=index.html>Naslovnica</a><li><a class=drop>Kolegiji</a><ul><li><a href=Oru.html>Organizacija rada i upravljanje na brodu</a><li><a href=Pb.html>Plovidba broda</a><li><a href=Pub.html>Poslovanje u brodarstvu</a><li><a href=Up.html>Ugovaranje u pomorstvu</a><li><a href=Uop.html>Upravljanje obalnim područjem</a><li><a href=Opb.html>Optimizacija poslovanja u brodarstvu</a></ul><li><a href=Ispiti.html>Ispiti</a><li><a class=drop>Seminari i zadaci</a><ul><li><a href=Sem.html>Seminari</a><li><a href=Zad.html>Radni zadaci</a><li><a href=Pre.html>Prezentacije gradiva</a></ul><li class="active last-child"><a class=drop>Razno</a><ul><li class=active><a href=# onclick="gateKeeper('10','DPL');return false">Diplomski i Završni rad</a><li><a href=# onclick="gateKeeper('40','UPL');return false">Pošalji datoteku</a><li><a href=# onclick="gateKeeper('30','DOW');return false">Preuzmi datoteku</a><li><a href=Gal.html>Galerija</a></ul></ul></nav></div></div><div class="wrapper row3 aniRow3"><div id=container><div class="one_half semlevo first"><h2>Teme diplomskih i završnih radova</h2><div class=accordion-wrapper><a href=javascript:void(0) class="accordion-title orange"><span>Organizacija rada i upravljanje na brodu (završni rad - studij NTPP, EITP)</span></a><div class=accordion-content><ul class="list arrow"><li><strong>Student osmišljava i predlaže proizvoljnu temu ili bira od ponuđenih:</strong></ul><ul class="list tick"><li><a href=# onclick="gateKeeper('S1-Oru','DPL');return false">Oru-Zr-1</a>: Utjecaj organizacije timskog rada u navigaciji na prevenciju nasukanja broda<li><a href=# onclick="gateKeeper('S2-Oru','DPL');return false">Oru-Zr-2</a>: Značaj organizacije timskog rada u prevenciji nesreća na moru<li><a href=# onclick="gateKeeper('S3-Oru','DPL');return false">Oru-Zr-3</a>: Utjecaj organizacije timskog rada u navigaciji na prevenciju sudara brodova<li><a href=# onclick="gateKeeper('S4-Oru','DPL');return false">Oru-Zr-4</a>: Značaj ljudskog faktora u pomorskim nesrećama<li><a href=# onclick="gateKeeper('S5-Oru','DPL');return false">Oru-Zr-5</a>: Utjecaj organizacije timskog rada u navigaciji na stradanje broda u nevremenu<li><a href=# onclick="gateKeeper('S6-Oru','DPL');return false">Oru-Zr-6</a>: Organizacija rada u funkciji sprečavanja nezgoda tijekom manevriranja broda u luci<li><a href=# onclick="gateKeeper('S7-Oru','DPL');return false">Oru-Zr-7</a>: Upravljanje navigacijskim timom u funkciji sprečavanja nasukanja broda<li><a href=# onclick="gateKeeper('S8-Oru','DPL');return false">Oru-Zr-8</a>: Ljudski faktor i sprečavanje nesreća na moru<li><a href=# onclick="gateKeeper('S9-Oru','DPL');return false">Oru-Zr-9</a>: Uloga timskog rada na mostu za vrijeme boravka broda na sidrištu<li><a href=# onclick="gateKeeper('S10-Oru','DPL');return false">Oru-Zr-10</a>: Timski rad u funkciji sprečavnja nesreća tijekom lučkih operacija prekrcaja tereta<li><a href=# onclick="gateKeeper('S11-Oru','DPL');return false">Oru-Zr-11</a>: Organizacija navigacijske straže u funkciji sprečavanja sudara brodova<li><a href=# onclick="gateKeeper('S12-Oru','DPL');return false">Oru-Zr-12</a>: Timski rad na mostu u funkciji sprečavanja sudara brodova u tjesnacima<li><a href=# onclick="gateKeeper('S13-Oru','DPL');return false">Oru-Zr-13</a>: Utjecaj organizacije rada na sprečavanje strukturalnih oštećenja broda<li><a href=# onclick="gateKeeper('S14-Oru','DPL');return false">Oru-Zr-14</a>: Organizacija rada na školskom brodu u funkciji sprečavanja nesreća<li><a href=# onclick="gateKeeper('S15-Oru','DPL');return false">Oru-Zr-15</a>: Ljudski faktor i nesreća na brodu koja rezultira gubitkom ljudskog života<li><a href=# onclick="gateKeeper('S16-Oru','DPL');return false">Oru-Zr-16</a>: Ljudski faktor – primarni uzrok požara na brodu<li><a href=# onclick="gateKeeper('S17-Oru','DPL');return false">Oru-Zr-17</a>: Upravljanje radnim timom u sprečavanju gubitka ljudskog života<li><a href=# onclick="gateKeeper('S18-Oru','DPL');return false">Oru-Zr-18</a>: Sprečavanje požara na brodu učinkovitom organizacijom rada<li><a href=# onclick="gateKeeper('S19-Oru','DPL');return false">Oru-Zr-19</a>: Timski rad na mostu u funkciji sprečavanja nasukanja tankera<li><a href=# onclick="gateKeeper('S20-Oru','DPL');return false">Oru-Zr-20</a>: Timski rad na mostu u funkciji sprečavanja nasukanja broda za prijevoz kontejnera<li><a href=# onclick="gateKeeper('S21-Oru','DPL');return false">Oru-Zr-21</a>: Mjere sigurnosti pri radu ETO-a na brodu<li><a href=# onclick="gateKeeper('S22-Oru','DPL');return false">Oru-Zr-22</a>: Mjere sigurnosti pri radu sa separatorom goriva u strojarnici<li><a href=# onclick="gateKeeper('S23-Oru','DPL');return false">Oru-Zr-23</a>: Cyber sigurnost na brodovima<li><a href=# onclick="gateKeeper('S24-Oru','DPL');return false">Oru-Zr-24</a>: Organizacija pri radu s palubnom dizalicom<li><a href=# onclick="gateKeeper('S25-Oru','DPL');return false">Oru-Zr-25</a>: Organizacija rada u strojarnici u funkciji sprečavanja požara na RO-RO brodu<li><a href=# onclick="gateKeeper('S26-Oru','DPL');return false">Oru-Zr-26</a>: Ulazak u zatvorene prostore na brodu<li><a href=# onclick="gateKeeper('S27-Oru','DPL');return false">Oru-Zr-27</a>: Timski rad pri privezu broda<li><a href=# onclick="gateKeeper('S28-Oru','DPL');return false">Oru-Zr-28</a>: Organizacija rada u strojarnici u funkciji sprečavanja požara na RO-RO putničkom brodu<li><a href=# onclick="gateKeeper('S29-Oru','DPL');return false">Oru-Zr-29</a>: Ljudski faktor i sprečavanje sudara na moru<li><a href=# onclick="gateKeeper('S30-Oru','DPL');return false">Oru-Zr-30</a>: Organizacija rada i sprečavanje gubitka palubnog tereta u nevremenu<li><a href=# onclick="gateKeeper('S31-Oru','DPL');return false">Oru-Zr-31</a>: Mjere opreza pri privezu tankera uz terminal<li><a href=# onclick="gateKeeper('S32-Oru','DPL');return false">Oru-Zr-32</a>: Požar na turističkom brodu - preventivne mjere<li><a href=# onclick="gateKeeper('S33-Oru','DPL');return false">Oru-Zr-33</a>: Udar kontejnerskog broda o obalu - preventivne mjere pri privezu<li><a href=# onclick="gateKeeper('S34-Oru','DPL');return false">Oru-Zr-34</a>: Požar u strojarnici kontejnerskog broda - ljudski faktor<li><a href=# onclick="gateKeeper('S35-Oru','DPL');return false">Oru-Zr-35</a>: Opasnost od udara vala pri radu na palubi - mjere zaštite<li><a href=# onclick="gateKeeper('S36-Oru','DPL');return false">Oru-Zr-36</a>: Zaštitne mjere pri radu na RO-RO brodu<li><a href=# onclick="gateKeeper('S37-Oru','DPL');return false">Oru-Zr-37</a>: Organizacija rada kod osiguranja drva kako palubnog tereta<li><a href=# onclick="gateKeeper('S38-Oru','DPL');return false">Oru-Zr-38</a>: Organizacija rada na mostu u funkciji sprečavanja nasukanja<li><a href=# onclick="gateKeeper('S39-Oru','DPL');return false">Oru-Zr-39</a>: Mjere opreza pri izvođenju vježbi na putničkom brodu<li><a href=# onclick="gateKeeper('S40-Oru','DPL');return false">Oru-Zr-40</a>: Naukanje ribarskog broda i ljudski faktor<li><a href=# onclick="gateKeeper('S41-Oru','DPL');return false">Oru-Zr-41</a>: Organizacija rada kao glavni čimbenik sprečavanja sudara brodova<li><a href=# onclick="gateKeeper('S42-Oru','DPL');return false">Oru-Zr-42</a>: Požar u skladišnom prostoru kontejerskog broda - mjere opreza<li><a href=# onclick="alert('Student predlaže proizvoljnu temu.');return false">Oru-Zr-43</a>: Tema po dogovoru sa studentom</ul></div></div><div class=accordion-wrapper><a href=javascript:void(0) class="accordion-title orange"><span>Plovidba broda (završni rad - studij BS)</span></a><div class=accordion-content><ul class="list arrow"><li><strong>Student osmišljava i predlaže proizvoljnu temu ili bira od ponuđenih:</strong></ul><ul class="list tick"><li><a href=# onclick="gateKeeper('S1-Pb','DPL');return false">Pb-Zr-1</a>: Plovidba u području leda<li><a href=# onclick="gateKeeper('S2-Pb','DPL');return false">Pb-Zr-2</a>: Uporaba navigacijskih karata na brodu<li><a href=# onclick="gateKeeper('S3-Pb','DPL');return false">Pb-Zr-3</a>: GMDSS sustav u pomorstvu<li><a href=# onclick="gateKeeper('S4-Pb','DPL');return false">Pb-Zr-4</a>: Automatsko upravljanje kormilom na brodu<li><a href=# onclick="gateKeeper('S5-Pb','DPL');return false">Pb-Zr-5</a>: Primjena zvrčnog kompasa na brod<li><a href=# onclick="gateKeeper('S6-Pb','DPL');return false">Pb-Zr-6</a>: ECDIS sustav na brodu<li><a href=# onclick="gateKeeper('S7-Pb','DPL');return false">Pb-Zr-7</a>: Brodski integrirani navigacijski sustav<li><a href=# onclick="gateKeeper('S8-Pb','DPL');return false">Pb-Zr-8</a>: Primjena DGPS i GPS pozicioniranja na brodu<li><a href=# onclick="gateKeeper('S9-Pb','DPL');return false">Pb-Zr-9</a>: Satelitska navigacija u pomorstvu<li><a href=# onclick="gateKeeper('S10-Pb','DPL');return false">Pb-Zr-10</a>: Primjena doplerovog principa u mjerenju brzine broda<li><a href=# onclick="gateKeeper('S11-Pb','DPL');return false">Pb-Zr-11</a>: Mjerenje brzine broda<li><a href=# onclick="gateKeeper('S12-Pb','DPL');return false">Pb-Zr-12</a>: Mjerenje dubine mora s broda<li><a href=# onclick="alert('Student sam nalazi literaturu !');return false">Pb-Zr-13</a>: Kartografske projekcije u pomorstvu<li><a href=# onclick="alert('Student sam nalazi literaturu !');return false">Pb-Zr-14</a>: Planiranje pomorskog putovanja<li><a href=# onclick="alert('Student sam nalazi literaturu !');return false">Pb-Zr-15</a>: Organizacija i izvedba pomorskog putovanja<li><a href=# onclick="alert('Student sam nalazi literaturu !');return false">Pb-Zr-16</a>: Dinamika mora<li><a href=# onclick="alert('Student predlaže proizvoljnu temu.');return false">Pb-Zr-17</a>: Tema po dogovoru sa studentom</ul></div></div><div class=accordion-wrapper><a href=javascript:void(0) class="accordion-title orange"><span>Poslovanje u brodarstvu (završni rad - studij NTPP)</span></a><div class=accordion-content><ul class="list arrow"><li><strong>Student osmišljava i predlaže proizvoljnu temu ili bira od ponuđenih:</strong></ul><ul class="list tick"><li><a href=# onclick="gateKeeper('Dr1-Pub','DPL');return false">Pub-Zr-1</a>: Utjecaj ciklusa pomorskog tržišta na strategiju poslovanja brodara<li><a href=# onclick="gateKeeper('Dr2-Pub','DPL');return false">Pub-Zr-2</a>: Deskriptivni model segementacije pomorskog tržišta<li><a href=# onclick="gateKeeper('Dr3-Pub','DPL');return false">Pub-Zr-3</a>: Komparativna analiza uspješnosti različitih politika poslovanja brodara<li><a href=# onclick="gateKeeper('Dr4-Pub','DPL');return false">Pub-Zr-4</a>: Utjecaj globalnih trgovinskih ruta na pomorsko tržište<li><a href=# onclick="gateKeeper('Dr5-Pub','DPL');return false">Pub-Zr-5</a>: Dinamika pomorsko-tržišnog segmenta rasutih i specijalnih tereta<li><a href=# onclick="gateKeeper('Dr6-Pub','DPL');return false">Pub-Zr-6</a>: Utjecaj tržišnih čimbenika u slobodnom i linijskom brodarstvu<li><a href=# onclick="gateKeeper('Dr7-Pub','DPL');return false">Pub-Zr-7</a>: Utjecaj ciklusa brodogradnje i regulacija u pomorstvu na poslovno odlučivanje brodara<li><a href=# onclick="gateKeeper('Dr8-Pub','DPL');return false">Pub-Zr-8</a>: Tržišna evaluacija brodova u prekomorskoj trgovini<li><a href=# onclick="gateKeeper('Dr9-Pub','DPL');return false">Pub-Zr-9</a>: Utjecaj odabira države pripadnosti na upravljanje brodom<li><a href=# onclick="alert('Student sam nalazi literaturu !');return false">Pub-Zr-10</a>: Svjetska brodogradnja i rezališta brodova<li><a href=# onclick="alert('Student sam nalazi literaturu !');return false">Pub-Zr-11</a>: Predviđanje i istraživanje pomorskog tržišta<li><a href=# onclick="alert('Student sam nalazi literaturu !');return false">Pub-Zr-12</a>: Financiranje brodova i brodarskih kompanija<li><a href=# onclick="alert('Student sam nalazi literaturu !');return false">Pub-Zr-13</a>: Utjecaj troškova i zarade brodara na kretanje pomorskog tržišta<li><a href=# onclick="alert('Student sam nalazi literaturu !');return false">Pub-Zr-14</a>: Korelacija ponude i potražnje brodova s visinom vozarine<li><a href=# onclick="alert('Student predlaže proizvoljnu temu.');return false">Pub-Zr-15</a>: Tema po dogovoru sa studentom</ul></div></div><div class=accordion-wrapper><a href=javascript:void(0) class="accordion-title orange"><span>Ugovaranje u pomorstvu (diplomski rad - studij NTPP)</span></a><div class=accordion-content><ul class="list arrow"><li><strong>Student osmišljava i predlaže proizvoljnu temu ili bira od ponuđenih:</strong></ul><ul class="list tick"><li><a href=# onclick="gateKeeper('Dr1-Up','DPL');return false">Up-Dr-1</a>: Modeliranje rizika poslovanja brodara u funkciji predviđanja ciklusa pomorskog tržišta<li><a href=# onclick="gateKeeper('Dr2-Up','DPL');return false">Up-Dr-2</a>: Utjecaj evropskog pomorskog okruženja na hrvatsku brodogradnju<li><a href=# onclick="gateKeeper('Dr3-Up','DPL');return false">Up-Dr-3</a>: Pozicija prijevoznika u ugovoru o prijevozu stvari morem<li><a href=# onclick="gateKeeper('Dr4-Up','DPL');return false">Up-Dr-4</a>: Odgovornost prijevoznika prema konvenciji o prijevozu stvari<li><a href=# onclick="gateKeeper('Dr5-Up','DPL');return false">Up-Dr-5</a>: Zakup broda prema hrvatskom pravu<li><a href=# onclick="gateKeeper('Dr6-Up','DPL');return false">Up-Dr-6</a>: Ugovorne strane prema ugovoru o iskorištavanju pomorskih brodova<li><a href=# onclick="gateKeeper('Dr7-Up','DPL');return false">Up-Dr-7</a>: Ukrcaj, prijevoz i predaja tereta primaocu<li><a href=# onclick="gateKeeper('Dr1-Pub','DPL');return false">Up-Dr-8</a>: Utjecaj ciklusa pomorskog tržišta na ugovaranje prijevoza u pomorstvu<li><a href=# onclick="alert('Osnovna literatura: BIMCO Shipbuilding Contract');return false">Up-Dr-9</a>: Pozicja brodara prema ugovoru o gradnji broda<li><a href=# onclick="alert('Osnovna literatura: BIMCO Voyage Charter Party i Time Charter Party');return false">Up-Dr-10</a>: Komparacija ugovora o zakupu broda na putovanje i zakupa broda na vrijeme<li><a href=# onclick="alert('Student predlaže proizvoljnu temu.');return false">Up-Dr-11</a>: Tema po dogovoru sa studentom</ul></div></div><div class=accordion-wrapper><a href=javascript:void(0) class="accordion-title orange"><span>Upravljanje obalnim područjem (diplomski rad - studij NTPP, LMPP, TOP)</span></a><div class=accordion-content><ul class="list arrow"><li><strong>Student osmišljava i predlaže proizvoljnu temu ili bira od ponuđenih:</strong></ul><ul class="list tick"><li><a href=# onclick="gateKeeper('S1-Uop','DPL');return false">Uop-Dr-1</a>: Poboljšanje praćenja degradacije obalnog područja<li><a href=# onclick="gateKeeper('S2-Uop','DPL');return false">Uop-Dr-2</a>: Procjena održivog kapaciteta turističkog razvoja obalnog područja<li><a href=# onclick="gateKeeper('S3-Uop','DPL');return false">Uop-Dr-3</a>: Planski razvoj obalnog i priobalnog područja<li><a href=# onclick="gateKeeper('S4-Uop','DPL');return false">Uop-Dr-4</a>: Razlozi uvođenja upravljanja obalnim područjem<li><a href=# onclick="gateKeeper('S5-Uop','DPL');return false">Uop-Dr-5</a>: Turizam i održivi razvoj<li><a href=# onclick="gateKeeper('S6-Uop','DPL');return false">Uop-Dr-6</a>: Ostvarivost programa integriranog upravljanja obalnim područjem<li><a href=# onclick="gateKeeper('S7-Uop','DPL');return false">Uop-Dr-7</a>: Određivanje i elaboracija strategija, opcija i akcija održivog razvoja obalnog područja<li><a href=# onclick="gateKeeper('S8-Uop','DPL');return false">Uop-Dr-8</a>: Koncept, principi i trenutna iskustva integriranog upravljanja obalnim područjem<li><a href=# onclick="gateKeeper('S9-Uop','DPL');return false">Uop-Dr-9</a>: Procjena mogućnosti dugoročne implementacije CAMP projekta<li><a href=# onclick="gateKeeper('S10-Uop','DPL');return false">Uop-Dr-10</a>: Status upravljanja obalnim područjem i sukobi interesa<li><a href=# onclick="gateKeeper('S11-Uop','DPL');return false">Uop-Dr-11</a>: Mogućnosti i izazovi ICAM projekta<li><a href=# onclick="gateKeeper('S12-Uop','DPL');return false">Uop-Dr-12</a>: Integrirano upravljanje obalnim područjem u praksi<li><a href=# onclick="gateKeeper('S13-Uop','DPL');return false">Uop-Dr-13</a>: Procjena uspješnosti ICAM programa<li><a href=# onclick="gateKeeper('S14-Uop','DPL');return false">Uop-Dr-14</a>: Održivi turizam u obalnom području<li><a href=# onclick="gateKeeper('S17-Uop','DPL');return false">Uop-Dr-15</a>: Preporuke dobre prakse za procjenu nosivog kapaciteta turizma<li><a href=# onclick="gateKeeper('S18-Uop','DPL');return false">Uop-Dr-16</a>: Preporuke dobre prakse za procjenu nosivog kapaciteta turizma u obalnom području Mediterana<li><a href=# onclick="gateKeeper('S21-Uop','DPL');return false">Uop-Dr-17</a>: Mediteranska strategija održivog razvoja 2016-2025<li><a href=# onclick="gateKeeper('S22-Uop','DPL');return false">Uop-Dr-18</a>: Smjer razvoja posebnih morskih regiona<li><a href=# onclick="gateKeeper('S23-Uop','DPL');return false">Uop-Dr-19</a>: Smanjenje rizika katastrofa u priobalnom području<li><a href=# onclick="gateKeeper('S24-Uop','DPL');return false">Uop-Dr-20</a>: Ostvarenje ekosustavnog pristupa upravljanja morskim i obalnim područjem<li><a href=# onclick="gateKeeper('S25-Uop','DPL');return false">Uop-Dr-21</a>: Upravljanja obalnim područjem i načela dobre prakse<li><a href=# onclick="gateKeeper('S26-Uop','DPL');return false">Uop-Dr-22</a>: Implementacija integralnog upravljanje obalnim i morskim područjem<li><a href=# onclick="gateKeeper('S27-Uop','DPL');return false">Uop-Dr-23</a>: Korelacija integralnog upravljanje obalnim područjem i biološke raznolikosti<li><a href=# onclick="gateKeeper('S28-Uop','DPL');return false">Uop-Dr-24</a>: Obalni krajolici Mediterana - praksa upravljanja, tipologija i održivost<li><a href=# onclick="gateKeeper('S29-Uop','DPL');return false">Uop-Dr-25</a>: Ekonomski učinci pomorsko prostornog planiranja<li><a href=# onclick="gateKeeper('S31-Uop','DPL');return false">Uop-Dr-26</a>: Regionalno upravljanje morskim i priobalnim područjem<li><a href=# onclick="alert('Student predlaže proizvoljnu temu.');return false">Uop-Dr-27</a>: Tema po dogovoru sa studentom</ul></div></div><div class=embed-container><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTTd-JGF3IAcXwqWoWoxDX0Q5blGDavORaX5kPdf8cGPgJYA/viewform?embedded=true" frameborder=0 marginheight=0 marginwidth=0>Učitavanje...</iframe></div><div class=embed-container2><iframe frameborder=0 src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDHvUa4C-DhoRWGtTyvApTKcimTKbPDd1-kv0VMGP0Pvox3ozekaCwf4tUl4HxWUyoGhiOo-hDEWJD/pubhtml?gid=369610226&amp;single=true&amp;widget=true&amp;headers=false"></iframe></div></div><div id=sidebar_1 class="sidebar one_half semdesno"><aside><section><article><h2>Uputstva</h2><ul class="list arrow"><li>Student osmišljava i predlaže nastavniku proizvoljnu temu diplomskog/ završnog rada iz odgovarajućeg kolegija.<li>Student se može odlučiti i za odabir neke od ponuđenih tema.<li>Nastavnik potvrđuje studentu da se slaže s predloženom/ odabranom temom rada.<li>Za ponuđene teme, klikom na odgovarajuću šifru teme crvene boje dostupna je literatura koju student može koristiti kao dopunsku ili pomoćnu literaturu pri pisanju rada. Osnovnu, tj. temeljnu literaturu student pronalazi i koristi proizvoljno.<li>Diplomski rad mora biti izrađen u MS Word aplikaciji i sadrži minimum 50 stranica a završni rad 30 stranica, prema dole priloženim uputama fakulteta !<li>Predloženu/ odabranu temu potrebno je prijaviti u obrascu "Upis teme dipl/završ. rada" na ovoj strani, upisom traženih podataka.<li>U tablici "Zauzete teme dipl/završ. rada: do sada" vidljive su teme koje su već zauzete od drugih studenata. Student ne može prijaviti temu koja je već zauzeta !</ul></article></section><section><article><h2>Predaja dipl/završ. rada</h2><p><strong><script>var message="Datoteku (file) koja sadrži završen dipl/završ. rad potrebno je imenovati s šifrom vaše teme i imenom studenta, primjerice na sljedeći način: Oru-Zr-12 M-Vukic.docx, Pub-Dr-8 M-Vukic.docx"
-var neonbasecolor="#E85533"
-var neontextcolor="black"
-var flashspeed=50
-var n=0
-if(document.all||document.getElementById){document.write('<font color="'+neonbasecolor+'">')
-for(m=0;m<message.length;m++)
-document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
-document.write('</font>')}
-else
-document.write(message)
-beginneon()</script></strong><p>Datoteku je potrebno, najkasnije 30 dana prije planiranog termina obrane, poslati nastavniku putem internet strane <a href=# onclick="gateKeeper('40','UPL');return false">ovdje-&raquo;</a></article></section><h2>Dokumenti</h2><nav><ul><li><a href=docs/Zav-Predl.docx>Zavšni rad - Predložak</a><li><a href=docs/Zav-Upute.pdf>Zavšni rad - Upute</a><li><a href=docs/Zav-Pravil.pdf>Zavšni rad - Pravilnik</a><li><a href=docs/Dpl-Predl.docx>Diplomski rad - Predložak</a><li><a href=docs/Dpl-Upute.pdf>Diplomski rad - Upute</a><li><a href=docs/Dpl-Pravil.pdf>Diplomski rad - Pravilnik</a></li><br><li><a href="http://akademsko-pisanje.sz-ri.com/">UPUTE ZA AKADEMSKO PISANJE</a></ul></nav></aside></div><div class=clear></div></div></div><div class="wrapper row7 aniRow7"><div id=footer class=clear><div class="three_quarter levogal hidepart"><h2 class=footer_title>Galerija</h2><ul id=ft_gallery class="nospace spacing clear"><div id=fscontain><li class="one_eighth hidimag first"><a href=images/61.jpg><img src=images/61t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/62.jpg><img src=images/62t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/63.jpg><img src=images/63t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/64.jpg><img src=images/64t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/65.jpg><img src=images/65t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/71.jpg><img src=images/71t.jpg alt=""></a><li class="one_eighth hidepart2"><a href=images/78.jpg><img src=images/78t.jpg alt=""></a><li class="one_eighth hidepart2"><a href=images/79.jpg><img src=images/79t.jpg alt=""></a><li class="one_eighth hidimag first"><a href=images/72.jpg><img src=images/72t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/73.jpg><img src=images/73t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/74.jpg><img src=images/74t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/75.jpg><img src=images/75t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/76.jpg><img src=images/76t.jpg alt=""></a><li class="one_eighth hidimag"><a href=images/77.jpg><img src=images/77t.jpg alt=""></a><li class="one_eighth hidepart2"><a href=images/80.jpg><img src=images/80t.jpg alt=""></a><li class="one_eighth hidepart2"><a href=images/81.jpg><img src=images/81t.jpg alt=""></a></li></div></ul></div><a name=anchPrijava></a><div class="one_quarter desnogal logon rnd5"><h2 class=footer_title>Prijava</h2><form id=formreset class=rnd5 name=prijava><div class="form-input clear"><label for=korisnik>Korisnik <span class=required>*</span><br> <input type=text name=korisnik id=korisnik size=22 onkeydown=clickEr()> </label><div id=er class=osx-err-hiden>Pogrešne šifre !</div><div id=ok class=osx-err-hiden>Uspješno ste prijavljeni ! <br> Dostupni su vam sadržaji za unešenu kombinaciju Korisnik - Zaporka.</div><label for=zaporka>Zaporka <span class=required>*</span><br> <input type=password name=zaporka id=zaporka size=22 onkeydown=clickEr()> </label></div><p><input type=submit value=Potvrdi class="button orange small gradient" onclick="submitentry();return false"> &nbsp; <input type=reset value=Odustani class="button black small gradient" onclick=clickEr()></form></div></div></div><div class="wrapper row4"><div id=copyright class=clear><p class=fl_left>Izrada i &copy; 2018 - MH - PFRI<p class=fl_right>Program BzB</div></div><script src=//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js></script><script>window.jQuery||document.write('<script src="scripts/jquery-2.1.4.min.js"><\/script>')</script><script src=//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js></script><script>window.jQuery.ui||document.write('<script src="scripts/jquery-ui.min.js"><\/script>')</script><script src=scripts/custom.js></script><script>jQuery(document).ready(function($){$('img').removeAttr('width height');});$(document).ready(function(){document.getElementById('formreset').reset();$(function(){slick();});$(function(){fullsiz();});$(function(){$(document).tooltip({track:true});});});function fader(){$("#loading").fadeOut(500);}
-document.addEventListener("DOMContentLoaded",fader());window.addEventListener("beforeunload",function(){document.body.classList.add("animate-out");});</script>
+return
+}
+}
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-20331217-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-20331217-1');
+</script>
+</head>
+<body class="">
+<div id="loading">
+<div id="loading-center">
+<div id="loading-center-absolute-one">
+<div class="object-one"></div>
+<div class="object-one"></div>
+<div class="object-one"></div>
+<div class="object-one"></div>
+<div class="object-one"></div>
+<div class="object-one"></div>
+<div class="object-one"></div>
+<div class="object-one"></div>
+<div class="object-one"></div>
+</div>
+<div id="loading-center-absolute-two">
+<div class="object-two"></div>
+<div class="object-two"></div>
+<div class="object-two"></div>
+<div class="object-two"></div>
+<div class="object-two"></div>
+<div class="object-two"></div>
+<div class="object-two"></div>
+<div class="object-two"></div>
+<div class="object-two"></div>
+</div>
+</div> 
+</div>
+<script>
+document.getElementById("loading").style.display = "block";
+</script>
+<div class="wrapper row1 aniRow1">
+  <header id="header" class="full_width clear">
+    <hgroup>
+      <h1><a href="index.html">dr.sc. Mirano Hess</a></h1>
+      <h2>Pomorski fakultet u Rijeci</h2>
+    </hgroup>
+    <div id="header-contact" class="rnd5">
+      <ul class="list none">
+        <!-- <li><span class="icon-phone"></span> Studentska ulica 2, 51000 Rijeka, tel: +385 (0)51 338 411 </li>  -->
+		<li>Kabinet 426, konzultacije: 08-12,<br>uz prethodni dogovor emailom</li>
+		<a name="anchVrh"></a>
+      </ul>
+    </div>
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<div class="slickm">
+<div class="wrapper row2">
+  <nav id="topnav">
+    <ul class="clear">
+      <li><a href="index.html" title="">Naslovnica</a></li>
+      <li><a class="drop" title="">Kolegiji</a>
+        <ul>
+          <li><a href="Oru.html" title="">Organizacija rada i upravljanje na brodu</a></li>
+          <li><a href="Pb.html" title="">Plovidba broda</a></li>
+          <li><a href="Pub.html" title="">Poslovanje u brodarstvu</a></li>
+          <li><a href="Up.html" title="">Ugovaranje u pomorstvu</a></li>
+          <li><a href="Uop.html" title="">Upravljanje obalnim područjem</a></li>
+          <li><a href="Opb.html" title="">Optimizacija poslovanja u brodarstvu</a></li>
+        </ul>
+      </li>
+      <li><a href="Ispiti.html" title="">Ispiti</a></li>
+      <li><a class="drop" title="">Seminari i zadaci</a>
+        <ul>
+          <li><a href="Sem.html" title="">Seminari</a></li>
+          <li><a href="Zad.html" title="">Radni zadaci</a></li>
+		  <li><a href="Pre.html" title="">Prezentacije gradiva</a></li>
+        </ul>
+      </li>
+		<li class="active last-child"><a class="drop" title="">Razno</a>
+			<ul>
+				<li class="active"><a href="#" title="">Diplomski i Završni rad</a></li>
+				<!-- <li class="active"><a href="#" onclick="gateKeeper('10','DPL');return false;">Diplomski i Završni rad</a></li> -->
+				<li><a href="#" onclick="gateKeeper('40','UPL');return false;" title="">Pošalji datoteku</a></li>
+				<li><a href="#" onclick="gateKeeper('30','DOW');return false;" title="">Preuzmi datoteku</a></li>
+				<li><a href="Gal.html" title="">Galerija</a></li>
+				<!-- <li><a href="Sta.html" title="">Navigacija i Staze u okolici</a></li> -->
+			</ul>
+		</li>
+		<!-- <li class="last-child"><a href="Kon.php" title="Kontaktiraj nastavnika">Kontakt</a></li> -->
+      
+    </ul>
+  </nav>
+</div>
+</div>
+<!-- content -->
+<div class="wrapper row3 aniRow3">
+  <div id="container">
+    <!-- ################################################################################################ -->
+    <div class="one_half semlevo first">
+        <!-- ########################################################################################## -->
+      <h2>Teme i literatura - diplomski i završni radovi</h2>
+      <div class="accordion-wrapper"><a href="javascript:void(0)" class="accordion-title orange"><span>Organizacija rada i upravljanje na brodu (završni rad - studij NTPP, EITP)</span></a>
+        <div class="accordion-content">
+		<ul class="list arrow">		
+			<li><strong>Student osmišljava i predlaže proizvoljnu temu ili bira od ponuđenih:</strong></li>
+		</ul>
+		<ul class="list tick">
+		  <li><a href="#" onclick="gateKeeper('S1-Oru','DPL');return false;">Oru-Zr-1</a>: Utjecaj organizacije timskog rada u navigaciji na prevenciju nasukanja broda</li>
+		  <li><a href="#" onclick="gateKeeper('S2-Oru','DPL');return false;">Oru-Zr-2</a>: Značaj organizacije timskog rada u prevenciji nesreća na moru</li>
+		  <li><a href="#" onclick="gateKeeper('S3-Oru','DPL');return false;">Oru-Zr-3</a>: Utjecaj organizacije timskog rada u navigaciji na prevenciju sudara brodova</li>
+		  <li><a href="#" onclick="gateKeeper('S4-Oru','DPL');return false;">Oru-Zr-4</a>: Značaj ljudskog faktora u pomorskim nesrećama</li>
+		  <li><a href="#" onclick="gateKeeper('S5-Oru','DPL');return false;">Oru-Zr-5</a>: Utjecaj organizacije timskog rada u navigaciji na stradanje broda u nevremenu</li>
+		  <li><a href="#" onclick="gateKeeper('S6-Oru','DPL');return false;">Oru-Zr-6</a>: Organizacija rada u funkciji sprečavanja nezgoda tijekom manevriranja broda u luci</li>
+		  <li><a href="#" onclick="gateKeeper('S7-Oru','DPL');return false;">Oru-Zr-7</a>: Upravljanje navigacijskim timom u funkciji sprečavanja nasukanja broda</li>
+		  <li><a href="#" onclick="gateKeeper('S8-Oru','DPL');return false;">Oru-Zr-8</a>: Ljudski faktor i sprečavanje nesreća na moru</li>
+		  <li><a href="#" onclick="gateKeeper('S9-Oru','DPL');return false;">Oru-Zr-9</a>: Uloga timskog rada na mostu za vrijeme boravka broda na sidrištu</li>
+		  <li><a href="#" onclick="gateKeeper('S10-Oru','DPL');return false;">Oru-Zr-10</a>: Timski rad u funkciji sprečavnja nesreća tijekom lučkih operacija prekrcaja tereta</li>
+		  <li><a href="#" onclick="gateKeeper('S11-Oru','DPL');return false;">Oru-Zr-11</a>: Organizacija navigacijske straže u funkciji sprečavanja sudara brodova</li>
+		  <li><a href="#" onclick="gateKeeper('S12-Oru','DPL');return false;">Oru-Zr-12</a>: Timski rad na mostu u funkciji sprečavanja sudara brodova u tjesnacima</li>
+		  <li><a href="#" onclick="gateKeeper('S13-Oru','DPL');return false;">Oru-Zr-13</a>: Utjecaj organizacije rada na sprečavanje strukturalnih oštećenja broda</li>
+		  <li><a href="#" onclick="gateKeeper('S14-Oru','DPL');return false;">Oru-Zr-14</a>: Organizacija rada na školskom brodu u funkciji sprečavanja nesreća</li>
+		  <li><a href="#" onclick="gateKeeper('S15-Oru','DPL');return false;">Oru-Zr-15</a>: Ljudski faktor i nesreća na brodu koja rezultira gubitkom ljudskog života</li>
+		  <li><a href="#" onclick="gateKeeper('S16-Oru','DPL');return false;">Oru-Zr-16</a>: Ljudski faktor – primarni uzrok požara na brodu</li>
+		  <li><a href="#" onclick="gateKeeper('S17-Oru','DPL');return false;">Oru-Zr-17</a>: Upravljanje radnim timom u sprečavanju gubitka ljudskog života</li>
+		  <li><a href="#" onclick="gateKeeper('S18-Oru','DPL');return false;">Oru-Zr-18</a>: Sprečavanje požara na brodu učinkovitom organizacijom rada</li>
+			<li><a href="#" onclick="gateKeeper('S19-Oru','DPL');return false;">Oru-Zr-19</a>: Timski rad na mostu u funkciji sprečavanja nasukanja tankera</li>
+			<li><a href="#" onclick="gateKeeper('S20-Oru','DPL');return false;">Oru-Zr-20</a>: Timski rad na mostu u funkciji sprečavanja nasukanja broda za prijevoz kontejnera</li>
+			<li><a href="#" onclick="gateKeeper('S21-Oru','DPL');return false;">Oru-Zr-21</a>: Mjere sigurnosti pri radu ETO-a na brodu</li>
+			<li><a href="#" onclick="gateKeeper('S22-Oru','DPL');return false;">Oru-Zr-22</a>: Mjere sigurnosti pri radu sa separatorom goriva u strojarnici</li>
+			<li><a href="#" onclick="gateKeeper('S23-Oru','DPL');return false;">Oru-Zr-23</a>: Cyber sigurnost na brodovima</li>
+			<li><a href="#" onclick="gateKeeper('S24-Oru','DPL');return false;">Oru-Zr-24</a>: Organizacija pri radu s palubnom dizalicom</li>
+			<li><a href="#" onclick="gateKeeper('S25-Oru','DPL');return false;">Oru-Zr-25</a>: Organizacija rada u strojarnici u funkciji sprečavanja požara na RO-RO brodu</li>
+			<li><a href="#" onclick="gateKeeper('S26-Oru','DPL');return false;">Oru-Zr-26</a>: Ulazak u zatvorene prostore na brodu</li>
+			<li><a href="#" onclick="gateKeeper('S27-Oru','DPL');return false;">Oru-Zr-27</a>: Timski rad pri privezu broda</li>
+			<li><a href="#" onclick="gateKeeper('S28-Oru','DPL');return false;">Oru-Zr-28</a>: Organizacija rada u strojarnici u funkciji sprečavanja požara na RO-RO putničkom brodu</li>
+			<li><a href="#" onclick="gateKeeper('S29-Oru','DPL');return false;">Oru-Zr-29</a>: Ljudski faktor i sprečavanje sudara na moru</li>
+			<li><a href="#" onclick="gateKeeper('S30-Oru','DPL');return false;">Oru-Zr-30</a>: Organizacija rada i sprečavanje gubitka palubnog tereta u nevremenu</li>
+			<li><a href="#" onclick="gateKeeper('S31-Oru','DPL');return false;">Oru-Zr-31</a>: Mjere opreza pri privezu tankera uz terminal</li>
+			<li><a href="#" onclick="gateKeeper('S32-Oru','DPL');return false;">Oru-Zr-32</a>: Požar na turističkom brodu - preventivne mjere</li>
+			<li><a href="#" onclick="gateKeeper('S33-Oru','DPL');return false;">Oru-Zr-33</a>: Udar kontejnerskog broda o obalu - preventivne mjere pri privezu</li>
+			<li><a href="#" onclick="gateKeeper('S34-Oru','DPL');return false;">Oru-Zr-34</a>: Požar u strojarnici kontejnerskog broda - ljudski faktor</li>
+			<li><a href="#" onclick="gateKeeper('S35-Oru','DPL');return false;">Oru-Zr-35</a>: Opasnost od udara vala pri radu na palubi - mjere zaštite</li>
+			<li><a href="#" onclick="gateKeeper('S36-Oru','DPL');return false;">Oru-Zr-36</a>: Zaštitne mjere pri radu na RO-RO brodu</li>
+			<li><a href="#" onclick="gateKeeper('S37-Oru','DPL');return false;">Oru-Zr-37</a>: Organizacija rada kod osiguranja drva kako palubnog tereta</li>
+			<li><a href="#" onclick="gateKeeper('S38-Oru','DPL');return false;">Oru-Zr-38</a>: Organizacija rada na mostu u funkciji sprečavanja nasukanja</li>
+			<li><a href="#" onclick="gateKeeper('S39-Oru','DPL');return false;">Oru-Zr-39</a>: Mjere opreza pri izvođenju vježbi na putničkom brodu</li>
+			<li><a href="#" onclick="gateKeeper('S40-Oru','DPL');return false;">Oru-Zr-40</a>: Naukanje ribarskog broda i ljudski faktor</li>
+			<li><a href="#" onclick="gateKeeper('S41-Oru','DPL');return false;">Oru-Zr-41</a>: Organizacija rada kao glavni čimbenik sprečavanja sudara brodova</li>
+			<li><a href="#" onclick="gateKeeper('S42-Oru','DPL');return false;">Oru-Zr-42</a>: Požar u skladišnom prostoru kontejerskog broda - mjere opreza</li>
+			<li><a href="#" onclick="alert('Student predlaže proizvoljnu temu.');return false;">Oru-Zr-43</a>: Tema po dogovoru sa studentom</li>
+		</ul>
+		<ul class="list arrow">		
+			<li><strong>Student, uz literaturu dostupnu klikom na šifru teme, može koristiti i sljedeće internet izvore:</strong></li>
+		</ul>
+		<ul class="list bullet">		
+			<li><a href="https://narodne-novine.nn.hr/clanci/sluzbeni/2004_12_181_3142.html" target="_blank" rel="noopener noreferrer">Narodne novine</a>: Pomorski zakonik RH</li>
+			<li><a href="https://narodne-novine.nn.hr/clanci/sluzbeni/2015_11_122_2310.html" target="_blank" rel="noopener noreferrer">Narodne novine</a>: Uredba o načinu i uvjetima za obavljanje sigurnosnih istraga pomorskih nesreća i nezgoda RH</li>
+			<li><a href="https://narodne-novine.nn.hr/clanci/sluzbeni/2013_10_130_2834.html" target="_blank" rel="noopener noreferrer">Narodne novine</a>: Pravilnik o zvanjima i svjedodžbama o osposobljenosti pomoraca RH</li>
+			<li><a href="https://safety4sea.com/wp-content/uploads/2020/11/UK-MCA-Code-of-Safe-Working-Practices-for-Merchant-Seafarers-Amendment-2020_1.pdf" target="_blank" rel="noopener noreferrer">Safety4sea</a>: Code of Safe Working Practices for Merchant Seafarers 2020. Isto je i ovdje:</li>
+			<li><a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/938726/Code_of_Safe_Working_Practices_for_Merchant_Seafarers_Amendment_5_Oct_2020_v.2.pdf" target="_blank" rel="noopener noreferrer">GOV.UK</a>: Code of Safe Working Practices for Merchant Seafarers 2020</li>
+			<li><a href="https://www.academia.edu/29814888/BRIDGE_PROCEDURE_GUIDE_FIFTH_EDITION" target="_blank" rel="noopener noreferrer">ICS at Academia</a>: International Chamber of Shipping, Bridge Procedures Guide 5th Edition 2016. Isto je i ovdje:</li>
+			<li><a href="https://kupdf.net/download/bridge-procedures-guide-2016pdf_5aed66f1e2b6f5077f91a130_pdf" target="_blank" rel="noopener noreferrer">ICS at Kupdf</a>: ICS, Bridge Procedures Guide 5th Edition 2016</li>
+			<li><a href="https://kupdf.net/download/bridge-team-management_5af64018e2b6f576258ee79f_pdf" target="_blank" rel="noopener noreferrer">NI at Kupdf</a>: Nautical institute, Bridge Team Management, 2nd Edition 2004</li>
+			<li><a href="https://bib.irb.hr/datoteka/844491.FINALNO_-_Planiranje_pomorskog_putovanja.pdf" target="_blank" rel="noopener noreferrer">Pomorski odjel, Sveučilište u Zadru</a>: Planiranje pomorskog putovanja, 2011</li>
+			<li><a href="http://www.emsa.europa.eu/accident-investigation-publications/annual-overview.html" target="_blank" rel="noopener noreferrer">EMSA</a>: European Maritime Safety Agency, Statistički podaci o nesrećama</li>
+			<li><a href="https://www.gov.uk/maib-reports">GOV.UK</a>: Primjere pomorskih nesreća</li>
+			<li><a href="https://www.ntsb.gov/investigations/accidentreports/pages/marine.aspx" target="_blank" rel="noopener noreferrer">NTSB</a>: National Transportation Safety Board, Primjere pomorskih nesreća</li>
+			<li><a href="https://safety4sea.com/tag/accident-reports/" target="_blank" rel="noopener noreferrer">Safety4sea</a>: Primjere pomorskih nesreća</li>
+		</ul>
+        </div>
+      </div>
+      <div class="accordion-wrapper"><a href="javascript:void(0)" class="accordion-title orange"><span>Plovidba broda (završni rad - studij BS)</span></a>
+        <div class="accordion-content">
+		<ul class="list arrow">		
+			<li><strong>Student osmišljava i predlaže proizvoljnu temu ili bira od ponuđenih:</strong></li>
+		</ul>
+		<ul class="list tick">
+		  <li><a href="#" onclick="gateKeeper('S1-Pb','DPL');return false;">Pb-Zr-1</a>: Plovidba u području leda</li>
+		  <li><a href="#" onclick="gateKeeper('S2-Pb','DPL');return false;">Pb-Zr-2</a>: Uporaba navigacijskih karata na brodu</li>
+		  <li><a href="#" onclick="gateKeeper('S3-Pb','DPL');return false;">Pb-Zr-3</a>: GMDSS sustav u pomorstvu</li>
+		  <li><a href="#" onclick="gateKeeper('S4-Pb','DPL');return false;">Pb-Zr-4</a>: Automatsko upravljanje kormilom na brodu</li>
+		  <li><a href="#" onclick="gateKeeper('S5-Pb','DPL');return false;">Pb-Zr-5</a>: Primjena zvrčnog kompasa na brod</li>
+		  <li><a href="#" onclick="gateKeeper('S6-Pb','DPL');return false;">Pb-Zr-6</a>: ECDIS sustav na brodu</li>
+		  <li><a href="#" onclick="gateKeeper('S7-Pb','DPL');return false;">Pb-Zr-7</a>: Brodski integrirani navigacijski sustav</li>
+		  <li><a href="#" onclick="gateKeeper('S8-Pb','DPL');return false;">Pb-Zr-8</a>: Primjena DGPS i GPS pozicioniranja na brodu</li>
+		  <li><a href="#" onclick="gateKeeper('S9-Pb','DPL');return false;">Pb-Zr-9</a>: Satelitska navigacija u pomorstvu</li>
+		  <li><a href="#" onclick="gateKeeper('S10-Pb','DPL');return false;">Pb-Zr-10</a>: Primjena doplerovog principa u mjerenju brzine broda</li>
+		  <li><a href="#" onclick="gateKeeper('S11-Pb','DPL');return false;">Pb-Zr-11</a>: Mjerenje brzine broda</li>
+		  <li><a href="#" onclick="gateKeeper('S12-Pb','DPL');return false;">Pb-Zr-12</a>: Mjerenje dubine mora s broda</li>
+			<li><a href="#" onclick="alert('Student sam nalazi literaturu !');return false;">Pb-Zr-13</a>: Kartografske projekcije u pomorstvu</li>
+			<li><a href="#" onclick="alert('Student sam nalazi literaturu !');return false;">Pb-Zr-14</a>: Planiranje pomorskog putovanja</li>
+			<li><a href="#" onclick="alert('Student sam nalazi literaturu !');return false;">Pb-Zr-15</a>: Organizacija i izvedba pomorskog putovanja</li>
+			<li><a href="#" onclick="alert('Student sam nalazi literaturu !');return false;">Pb-Zr-16</a>: Dinamika mora</li>
+			<li><a href="#" onclick="alert('Student predlaže proizvoljnu temu.');return false;">Pb-Zr-17</a>: Tema po dogovoru sa studentom</li>
+		</ul>
+        </div>
+      </div>
+      <div class="accordion-wrapper"><a href="javascript:void(0)" class="accordion-title orange"><span>Poslovanje u brodarstvu (završni rad - studij NTPP)</span></a>
+        <div class="accordion-content">
+		<ul class="list arrow">		
+			<li><strong>Student osmišljava i predlaže proizvoljnu temu ili bira od ponuđenih:</strong></li>
+		</ul>
+		<ul class="list tick">
+		  <li><a href="#" onclick="gateKeeper('Dr1-Pub','DPL');return false;">Pub-Zr-1</a>: Utjecaj ciklusa pomorskog tržišta na strategiju poslovanja brodara</li>
+		  <li><a href="#" onclick="gateKeeper('Dr2-Pub','DPL');return false;">Pub-Zr-2</a>: Deskriptivni model segementacije pomorskog tržišta</li>
+		  <li><a href="#" onclick="gateKeeper('Dr3-Pub','DPL');return false;">Pub-Zr-3</a>: Komparativna analiza uspješnosti različitih politika poslovanja brodara</li>
+		  <li><a href="#" onclick="gateKeeper('Dr4-Pub','DPL');return false;">Pub-Zr-4</a>: Utjecaj globalnih trgovinskih ruta na pomorsko tržište</li>
+		  <li><a href="#" onclick="gateKeeper('Dr5-Pub','DPL');return false;">Pub-Zr-5</a>: Dinamika pomorsko-tržišnog segmenta rasutih i specijalnih tereta</li>
+		  <li><a href="#" onclick="gateKeeper('Dr6-Pub','DPL');return false;">Pub-Zr-6</a>: Utjecaj tržišnih čimbenika u slobodnom i linijskom brodarstvu</li>
+		  <li><a href="#" onclick="gateKeeper('Dr7-Pub','DPL');return false;">Pub-Zr-7</a>: Utjecaj ciklusa brodogradnje i regulacija u pomorstvu na poslovno odlučivanje brodara</li>
+			<li><a href="#" onclick="gateKeeper('Dr8-Pub','DPL');return false;">Pub-Zr-8</a>: Tržišna evaluacija brodova u prekomorskoj trgovini</li>
+			<li><a href="#" onclick="gateKeeper('Dr9-Pub','DPL');return false;">Pub-Zr-9</a>: Utjecaj odabira države pripadnosti na upravljanje brodom</li>
+			<li><a href="#" onclick="alert('Student sam nalazi literaturu ili koristi niže navedene internet izvore !');return false;">Pub-Zr-10</a>: Svjetska brodogradnja i rezališta brodova</li>
+			<li><a href="#" onclick="alert('Student sam nalazi literaturu ili koristi niže navedene internet izvore !');return false;">Pub-Zr-11</a>: Predviđanje i istraživanje pomorskog tržišta</li>
+			<li><a href="#" onclick="alert('Student sam nalazi literaturu ili koristi niže navedene internet izvore !');return false;">Pub-Zr-12</a>: Financiranje brodova i brodarskih kompanija</li>
+			<li><a href="#" onclick="alert('Student sam nalazi literaturu ili koristi niže navedene internet izvore !');return false;">Pub-Zr-13</a>: Utjecaj troškova i zarade brodara na kretanje pomorskog tržišta</li>
+			<li><a href="#" onclick="alert('Student sam nalazi literaturu ili koristi niže navedene internet izvore !');return false;">Pub-Zr-14</a>: Korelacija ponude i potražnje brodova s visinom vozarine</li>
+			<li><a href="#" onclick="alert('Student predlaže proizvoljnu temu.');return false;">Pub-Zr-15</a>: Tema po dogovoru sa studentom</li>
+		</ul>
+		</ul>
+		<ul class="list arrow">		
+			<li><strong>Student, uz literaturu dostupnu klikom na šifru teme, može koristiti i sljedeće internet izvore:</strong></li>
+		</ul>
+		<ul class="list bullet">		
+			<li><a href="https://unctad.org/system/files/official-document/tdstat46_en.pdf" target="_blank" rel="noopener noreferrer">UNCTAD</a>: United Nations Conference on Trade and Development, Handbook of Statistics 2021</li>
+			<li><a href="https://www.wto.org/english/res_e/statis_e/wts2020_e/wts2020_e.pdf" target="_blank" rel="noopener noreferrer">WTO</a>: The World Trade Organization, World Trade Statistical Review 2020</li>
+			<li><a href="https://unctad.org/system/files/official-document/rmt2021_en_0.pdf" target="_blank" rel="noopener noreferrer">UNCTAD</a>: Review of Maritime Transport 2021</li>
+			<li><a href="http://www.equasis.org/Fichiers/Statistique/MOA/Documents%20availables%20on%20statistics%20of%20Equasis/Equasis%20Statistics%20-%20The%20world%20fleet%202019.pdf" target="_blank" rel="noopener noreferrer">Equasis</a>: Electonic Quality Shipping Information System, The 2019 World Fleet Report</li>
+			<li><a href="https://it4resources.interactiv-doc.fr/catalogues/revue_2021_flipbook_online_668/galeries/brs_review_2021.pdf" target="_blank" rel="noopener noreferrer">BRS</a>: Annual Review, Shipping & Shipbuilding Markets 2021</li>
+			<li><a href="https://it4resources.interactiv-doc.fr/catalogues/revue2020_finale_flipbook_optimise_couv_668/galeries/brs_review_2020.pdf" target="_blank" rel="noopener noreferrer">BRS</a>: Annual Review, Shipping & Shipbuilding Markets 2020</li>
+			<li><a href="https://www.oecd-ilibrary.org/docserver/397de00c-en.pdf?expires=1616781739&id=id&accname=guest&checksum=FE2D10AC6EFEF3052B094DF4F507B7B2" target="_blank" rel="noopener noreferrer">OECD</a>: The Organisation for Economic Co-operation and Development, Ship  recycling - an overview 2019</li>
+			<li><a href="https://hrcak.srce.hr/file/360689" target="_blank" rel="noopener noreferrer">PFRI</a>: Global shipbuilding activities in the modern maritime market environment</li>
+		</ul>
+        </div>
+      </div>
+      <div class="accordion-wrapper"><a href="javascript:void(0)" class="accordion-title orange"><span>Ugovaranje u pomorstvu (diplomski rad - studij NTPP)</span></a>
+        <div class="accordion-content">
+		<ul class="list arrow">		
+			<li><strong>Student osmišljava i predlaže proizvoljnu temu ili bira od ponuđenih:</strong></li>
+		</ul>
+		<ul class="list tick">
+		  <li><a href="#" onclick="gateKeeper('Dr1-Up','DPL');return false;">Up-Dr-1</a>: Modeliranje rizika poslovanja brodara u funkciji predviđanja ciklusa pomorskog tržišta</li>
+		  <li><a href="#" onclick="gateKeeper('Dr2-Up','DPL');return false;">Up-Dr-2</a>: Utjecaj evropskog pomorskog okruženja na  hrvatsku brodogradnju</li>
+		  <li><a href="#" onclick="gateKeeper('Dr3-Up','DPL');return false;">Up-Dr-3</a>: Pozicija prijevoznika u ugovoru o prijevozu stvari morem</li>
+		  <li><a href="#" onclick="gateKeeper('Dr4-Up','DPL');return false;">Up-Dr-4</a>: Odgovornost prijevoznika prema konvenciji o prijevozu stvari</li>
+		  <li><a href="#" onclick="gateKeeper('Dr5-Up','DPL');return false;">Up-Dr-5</a>: Zakup broda prema hrvatskom pravu</li>
+		  <li><a href="#" onclick="gateKeeper('Dr6-Up','DPL');return false;">Up-Dr-6</a>: Ugovorne strane prema  ugovoru o iskorištavanju pomorskih brodova</li>
+		  <li><a href="#" onclick="gateKeeper('Dr7-Up','DPL');return false;">Up-Dr-7</a>: Ukrcaj, prijevoz i predaja tereta primaocu</li>
+		  <li><a href="#" onclick="gateKeeper('Dr1-Pub','DPL');return false;">Up-Dr-8</a>: Utjecaj ciklusa pomorskog tržišta na ugovaranje prijevoza u pomorstvu</li>
+		  <li><a href="#" onclick="alert('Osnovna literatura: BIMCO Shipbuilding Contract. Uz ovo student može koristiti niže navedene internet izvore !');return false;">Up-Dr-9</a>: Pozicja brodara prema ugovoru o gradnji broda</li>
+		  <li><a href="#" onclick="alert('Osnovna literatura: BIMCO Voyage Charter Party i Time Charter Party. Uz ovo student može koristiti niže navedene internet izvore !');return false;">Up-Dr-10</a>: Komparacija ugovora o zakupu broda na putovanje i zakupa broda na vrijeme</li>
+			<li><a href="#" onclick="alert('Student predlaže proizvoljnu temu.');return false;">Up-Dr-11</a>: Tema po dogovoru sa studentom</li>
+		</ul>
+		<ul class="list arrow">		
+			<li><strong>Student, uz literaturu dostupnu klikom na šifru teme, može koristiti i sljedeće internet izvore:</strong></li>
+		</ul>
+		<ul class="list bullet">		
+			<li><a href="https://www.bimco.org/" target="_blank" rel="noopener noreferrer">BIMCO</a>: Baltic and International Maritime Council</li>
+			<!-- <li><a href="https://www.bimco.org/authentication/members-only" target="_blank" rel="noopener noreferrer">BIMCO ugovori</a> --- --- Uputstva za prijavu na BIMCO stranici su<a href="docs/UPsemUPUT.pdf"> OVDJE</a></li> -->
+			<li><a href="https://www.bimco.org/contracts-and-clauses/bimco-contracts" target="_blank" rel="noopener noreferrer">BIMCO ugovori</a>: Contracts and Clauses</li>
+			<li><a href="https://www.balticexchange.com/en/index.html" target="_blank" rel="noopener noreferrer">BalticExchange</a>: Source of maritime market information</li>
+			<li><a href="https://www.worldscale.co.uk/book/preamble" target="_blank" rel="noopener noreferrer">Worldscale</a>: New Worldwide Tanker Nominal Freight Scale</li>
+			<li><a href="https://www.intercargo.org/" target="_blank" rel="noopener noreferrer">INTERCARGO</a>: The International Association of Dry Cargo Shipowners</li>
+			<li><a href="https://www.intertanko.com/" target="_blank" rel="noopener noreferrer">INTERTANKO</a>: International Association of Independent Tanker Owners</li>
+			<li><a href="https://www.fonasba.com/" target="_blank" rel="noopener noreferrer">FONASBA</a>: The Federation of National Associations of Ship Brokers and Agents</li>
+			<li><a href="https://www.clarksons.com/" target="_blank" rel="noopener noreferrer">Clarksons</a>: Provider of integrated shipping services</li>
+			<li><a href="https://tradingeconomics.com/commodity/baltic" target="_blank" rel="noopener noreferrer">Tradingeconomics</a>: BDI indeks</li>
+			<li><a href="http://www.oecd.org/industry/ind/shipbuilding.htm" target="_blank" rel="noopener noreferrer">OECD</a>: The Organisation for Economic Co-operation and Development, Shipbuilding</li>
+			<li><a href="https://data.oecd.org/industry/industrial-production.htm#indicator-chart" target="_blank" rel="noopener noreferrer">OECD Industry</a>: Industrial production index</li>
+			<li><a href="https://www.wto.org/english/res_e/statis_e/wts2020_e/wts2020_e.pdf" target="_blank" rel="noopener noreferrer">WTO</a>: The World Trade Organization</li>
+			<li><a href="https://cdn.ihsmarkit.com/www/pdf/0120/IHS-Markit-MT-Shipping2020MarketOutlook-January-2020.pdf" target="_blank" rel="noopener noreferrer">IHS Markit</a>: Information Handling Services, Shipping 2020 Outlook</li>
+			<li><a href="https://www.sajn.or.jp/e" target="_blank" rel="noopener noreferrer">SAJ</a>: (Shipbuilders' Association of Japan), Shipbuilding Statistics</li>
+			<li><a href="https://www.statista.com/topics/3712/shipbuilding-industry/" target="_blank" rel="noopener noreferrer">Statista</a>: Shipbuilding industry worldwide - statistics & facts</li>
+			<li><a href="https://unctad.org/system/files/official-document/rmt2021_en_0.pdf" target="_blank" rel="noopener noreferrer">UNCTAD</a>: United Nations Conference on Trade and Development, Review of Maritime Transport 2021</li>
+			<li><a href="https://unctad.org/system/files/official-document/tdstat46_en.pdf" target="_blank" rel="noopener noreferrer">UNCTAD</a>: Handbook of Statistics 2021</li>
+			<li><a href="https://unctadstat.unctad.org/wds/TableViewer/tableView.aspx?ReportId=93" target="_blank" rel="noopener noreferrer">UNCTAD</a>: Merchant fleet by flag of registration and by type of ship</li>
+			<li><a href="https://unctadstat.unctad.org/wds/TableViewer/tableView.aspx?ReportId=80100" target="_blank" rel="noopener noreferrer">UNCTAD</a>: Merchant fleet by country of beneficial ownership</li>
+			<li><a href="http://www.equasis.org/Fichiers/Statistique/MOA/Documents%20availables%20on%20statistics%20of%20Equasis/Equasis%20Statistics%20-%20The%20world%20fleet%202019.pdf" target="_blank" rel="noopener noreferrer">Equasis</a>: Electonic Quality Shipping Information System, The 2019 World Fleet Report</li>
+			<li><a href="https://www.equasis.org/EquasisWeb/public/PublicStatistic?fs=HomePage" target="_blank" rel="noopener noreferrer">Equasis</a>: Statistics</li>
+			<li><a href="http://infomaritime.eu/index.php/2021/02/19/top-15-shipowning-countries/" target="_blank" rel="noopener noreferrer">Infomaritime.eu</a>: World merchant fleet and top 15 shipowning countries</li>
+			<li><a href="http://infomaritime.eu/index.php/2021/05/23/top-10-shipowning-countries-fleet-value/" target="_blank" rel="noopener noreferrer">Infomaritime.eu</a>: Fleet Value for Top 10 Shipowning Nations</li>
+			<li><a href="https://imo.libguides.com/c.php?g=659460&p=4655182" target="_blank" rel="noopener noreferrer">IMO</a>: Information sources and statistics relating to maritime and shipping</li>
+			<li><a href="https://www.economy.com/economicview/tracker/5/Global-Business-Cycle-Map" target="_blank" rel="noopener noreferrer">MOODY'S ANALYTICS</a>: Global Business Cycle Map</li>
+			<li><a href="https://www.shipfinance.dk/" target="_blank" rel="noopener noreferrer">DSF</a>: Danish Ship Finance</li>
+		</ul>
+        </div>
+      </div>
+      <div class="accordion-wrapper"><a href="javascript:void(0)" class="accordion-title orange"><span>Upravljanje obalnim područjem (diplomski rad - studij NTPP, LMPP, TOP)</span></a>
+        <div class="accordion-content">
+		<ul class="list arrow">		
+			<li><strong>Student osmišljava i predlaže proizvoljnu temu ili bira od ponuđenih:</strong></li>
+		</ul>
+		<ul class="list tick">
+		  <li><a href="#" onclick="gateKeeper('S1-Uop','DPL');return false;">Uop-Dr-1</a>: Poboljšanje praćenja degradacije obalnog područja</li>
+		  <li><a href="#" onclick="gateKeeper('S2-Uop','DPL');return false;">Uop-Dr-2</a>: Procjena održivog kapaciteta turističkog razvoja obalnog područja</li>
+		  <li><a href="#" onclick="gateKeeper('S3-Uop','DPL');return false;">Uop-Dr-3</a>: Planski razvoj obalnog i priobalnog područja</li>
+		  <li><a href="#" onclick="gateKeeper('S4-Uop','DPL');return false;">Uop-Dr-4</a>: Razlozi uvođenja upravljanja obalnim područjem</li>
+		  <li><a href="#" onclick="gateKeeper('S5-Uop','DPL');return false;">Uop-Dr-5</a>: Turizam i održivi razvoj</li>
+		  <li><a href="#" onclick="gateKeeper('S6-Uop','DPL');return false;">Uop-Dr-6</a>: Ostvarivost programa integriranog upravljanja obalnim područjem</li>
+		  <li><a href="#" onclick="gateKeeper('S7-Uop','DPL');return false;">Uop-Dr-7</a>: Određivanje i elaboracija strategija, opcija i akcija održivog razvoja obalnog područja</li>
+		  <li><a href="#" onclick="gateKeeper('S8-Uop','DPL');return false;">Uop-Dr-8</a>: Koncept, principi i trenutna iskustva integriranog upravljanja obalnim područjem</li>
+		  <li><a href="#" onclick="gateKeeper('S9-Uop','DPL');return false;">Uop-Dr-9</a>: Procjena mogućnosti dugoročne implementacije  CAMP projekta</li>
+		  <li><a href="#" onclick="gateKeeper('S10-Uop','DPL');return false;">Uop-Dr-10</a>: Status upravljanja obalnim područjem i sukobi interesa</li>
+		  <li><a href="#" onclick="gateKeeper('S11-Uop','DPL');return false;">Uop-Dr-11</a>: Mogućnosti i izazovi ICAM projekta</li>
+		  <li><a href="#" onclick="gateKeeper('S12-Uop','DPL');return false;">Uop-Dr-12</a>: Integrirano upravljanje obalnim područjem u praksi</li>
+		  <li><a href="#" onclick="gateKeeper('S13-Uop','DPL');return false;">Uop-Dr-13</a>: Procjena uspješnosti ICAM programa</li>
+		  <li><a href="#" onclick="gateKeeper('S14-Uop','DPL');return false;">Uop-Dr-14</a>: Održivi turizam u obalnom području</li>
+		  <li><a href="#" onclick="gateKeeper('S17-Uop','DPL');return false;">Uop-Dr-15</a>: Preporuke dobre prakse za procjenu nosivog kapaciteta turizma</li>
+		  <li><a href="#" onclick="gateKeeper('S18-Uop','DPL');return false;">Uop-Dr-16</a>: Preporuke dobre prakse za procjenu nosivog kapaciteta turizma u obalnom području Mediterana</li>
+		  <li><a href="#" onclick="gateKeeper('S21-Uop','DPL');return false;">Uop-Dr-17</a>: Mediteranska strategija održivog razvoja 2016-2025</li>
+		  <li><a href="#" onclick="gateKeeper('S22-Uop','DPL');return false;">Uop-Dr-18</a>: Smjer razvoja posebnih morskih regiona</li>
+		  <li><a href="#" onclick="gateKeeper('S23-Uop','DPL');return false;">Uop-Dr-19</a>: Smanjenje rizika katastrofa u priobalnom području</li>
+		  <li><a href="#" onclick="gateKeeper('S24-Uop','DPL');return false;">Uop-Dr-20</a>: Ostvarenje ekosustavnog pristupa upravljanja morskim i obalnim područjem</li>
+		  <li><a href="#" onclick="gateKeeper('S25-Uop','DPL');return false;">Uop-Dr-21</a>: Upravljanja obalnim područjem i načela dobre prakse</li>
+		  <li><a href="#" onclick="gateKeeper('S26-Uop','DPL');return false;">Uop-Dr-22</a>: Implementacija integralnog upravljanje obalnim i morskim područjem
+		  <li><a href="#" onclick="gateKeeper('S27-Uop','DPL');return false;">Uop-Dr-23</a>: Korelacija integralnog upravljanje obalnim područjem i biološke raznolikosti</li>
+		  <li><a href="#" onclick="gateKeeper('S28-Uop','DPL');return false;">Uop-Dr-24</a>: Obalni krajolici Mediterana - praksa upravljanja, tipologija i održivost</li>
+		  <li><a href="#" onclick="gateKeeper('S29-Uop','DPL');return false;">Uop-Dr-25</a>: Ekonomski učinci pomorsko prostornog planiranja</li>
+		  <li><a href="#" onclick="gateKeeper('S31-Uop','DPL');return false;">Uop-Dr-26</a>: Regionalno upravljanje morskim i priobalnim područjem</li>
+			<li><a href="#" onclick="alert('Student predlaže proizvoljnu temu.');return false;">Uop-Dr-27</a>: Tema po dogovoru sa studentom</li>
+		</ul>
+		<ul class="list arrow">		
+			<li><strong>Student, uz literaturu dostupnu klikom na šifru teme, može koristiti i sljedeće internet izvore:</strong></li>
+		</ul>
+		<ul class="list bullet">		
+			<li><a href="https://mingor.gov.hr/" target="_blank" rel="noopener noreferrer">MINGOR RH</a>: Ministarstvo gospodarstva i održivog razvoja RH</li>
+			<li><a href="https://mmpi.gov.hr/" target="_blank" rel="noopener noreferrer">MMPI RH</a>: Ministarstvo mora, prometa i infrastukture RH</li>
+			<li><a href="https://mint.gov.hr/" target="_blank" rel="noopener noreferrer">MINT RH</a>: Ministarstvo turizma i sporta RH</li>
+			<li><a href="http://www.odrzivi.turizam.hr/default.aspx?id=9" target="_blank" rel="noopener noreferrer">MINT RH</a>: Ministarstvo turizma i sporta RH - Projekti</li>
+			<li><a href="http://paprac.org/" target="_blank" rel="noopener noreferrer">PAP/RAC</a>: Priority Actions Programme/Regional Activity Centre</li>
+			<li><a href="https://www.unep.org/" target="_blank" rel="noopener noreferrer">UNEP</a>: UN Environment Programme</li>
+			<li><a href="https://www.unep.org/unepmap/" target="_blank" rel="noopener noreferrer">UNEPMAP</a>: UN The Mediterranean Action Plan</li>
+			<li><a href="https://coast.noaa.gov/czm/" target="_blank" rel="noopener noreferrer">NOAA USA</a>: The National Coastal Zone Management Program</li>
+			<li><a href="https://ec.europa.eu/environment/iczm/rec_imp.htm" target="_blank" rel="noopener noreferrer">European Commission</a>: Coastal Zone Policy</li>
+		</ul>
+        </div>
+      </div>
+        <!-- ########################################################################################## -->
+		<!-- <div class="embed-container"> -->
+			<!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTTd-JGF3IAcXwqWoWoxDX0Q5blGDavORaX5kPdf8cGPgJYA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Učitavanje...</iframe> -->
+		<!-- </div> -->
+		<!-- <div class="embed-container2"> -->
+			<!-- <iframe frameborder='0' src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDHvUa4C-DhoRWGtTyvApTKcimTKbPDd1-kv0VMGP0Pvox3ozekaCwf4tUl4HxWUyoGhiOo-hDEWJD/pubhtml?gid=369610226&amp;single=true&amp;widget=true&amp;headers=false"></iframe> -->
+		<!-- </div> -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- ################################################################################################ -->
+    <div id="sidebar_1" class="sidebar one_half semdesno">
+      <aside>
+        <!-- ########################################################################################## -->
+		<!-- /section -->
+		<section>
+			<h2>Uputstva</h2>
+			<ul class="list arrow">
+			<li>Student osmišljava i predlaže nastavniku proizvoljnu temu diplomskog/ završnog rada iz odgovarajućeg kolegija.</li>
+			<li>Student se može odlučiti i za odabir neke od ponuđenih tema.</li>
+			<li>Nastavnik potvrđuje studentu da se slaže s predloženom/ odabranom temom rada.</li>
+			<li>Za ponuđene teme, klikom na odgovarajuću šifru teme crvene boje dostupna je literatura koju student može koristiti pri pisanju rada.</li>
+			<li>Također, za svaki kolegij navedeni su internet izvori koje student može koristiti.</li>
+			<li>Svu ostalu literaturu, po potrebi, student pronalazi i koristi proizvoljno.</li>
+			<li>Diplomski/Završni rad mora biti izrađen u MS Word aplikaciji. Diplomski sadrži minimum 50 stranica a završni rad 30 stranica, prema uputama fakulteta (za detalje vidi dole pod DOKUMENTI).</li>
+			<!-- <li>Predloženu/ odabranu temu potrebno je prijaviti u obrascu "Upis teme dipl/završ. rada" na ovoj strani, upisom traženih podataka.</li> -->
+			<!-- <li>U tablici "Zauzete teme dipl/završ. rada: do sada" vidljive su teme koje su već zauzete od drugih studenata. Student ne može prijaviti temu koja je već zauzeta !</li>		 -->
+			<!-- <li class="konzultacije"><strong>KONZULTACIJE</strong> soba 426: 09-12 uz prethodni dogovor emailom <a href="Kon.php">ovdje-&raquo;</a></li> -->
+			<!-- <li class="konzultacije"><strong>Konzultacije:</strong> prema uputama na naslovnici.</li> -->
+			</ul>
+		</section>
+
+		<section>
+		<ul class="list arrow">
+		
+			<h2>O čemu pisati !?</h2>
+			<p>Bez obzira za koju temu se odluči, student može koncipirati rad proizvoljno ili kako je niže navedeno:</p>
+			
+			<li><a href="#" onclick="actModal('myModal','close');">Organizacija rada i upravljanje na brodu</a></li>		  
+			<div id="myModal" class="modal">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <span class="closeMod" id="close">&times;</span>
+				  <h4>Organizacija rada i upravljanje na brodu, kako može izgledati završni rad</h4>
+				</div>
+				<div class="modal-body">
+					<li>Solucija 1:
+						<p>U radu se može pisati u prva 2-3 poglavlja o organizaciji rada na mostu/brodu i timskom radu.</p>
+						<p>U narednom poglavlju pisati o planiranju poslova/plovidbe.</p>
+						<p>Nakon ovoga može se u jednom poglavlju pisati općenito o međunarodnim propisima na temu siguranosti, SOLAS, MARPOL, STCW, ISO, ISM,...</p>
+						<p>Zatim se može naglasiti kako nepridržavanje organizacije rada, planiranja, propisa, te usljed umora, neznanja, loše komunikacije i ostalih ljudsih faktora dolazi do nezgoda i nesreća na moru.</p>
+						<p>U sljedeća 2-3 poglavlja može se pisati o analizi pomorske nesreće na nekom određeonm brodu. Analize nesreća, dostupne su klikom na šifru Vaše teme na ovoj stranici. Ili može se odabrati neku drugu nezgodu o kojoj ćete pisati kao primjer a možete ju naći na  poveznicama na Engleski MAIB ili Američki NTSB danim na kraju tema. Kod tih analiza važno se je osvrnuti na ono što piše na kraju tih analiza (Conclusions, Recommendations, Action taken). </p>
+						<p>Uz literaturu danu na ovoj stranici, student može i sam tražiti lieraturu, u Googlu s pojmovjima na hrvatski poput: pomorske nesreće, ljudski faktor u pomorstvu, organizacija rada na brodu, timski rad, sigurnost na moru... Ili na engleski: maritime accidents, human faktor in shipping, shipboard work organisation, onboard team management, safety at sea,...</p>
+						<p></p>
+					</li>
+					<li>Solucija 2: 
+						<p>Što god se Vi dosjetite.</p>
+					</li>
+				</div>
+				<div class="modal-footer">
+				  <h4>Primjer kako se može koncipirati rad</h4>
+				</div>
+			  </div>
+			</div>
+			
+			<li><a href="#" onclick="actModal('myModal2','close2');">Poslovanje u brodarstvu</a></li>		  
+			<div id="myModal2" class="modal">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <span class="closeMod" id="close2">&times;</span>
+				  <h4>Poslovanje u brodarstvu, kako može izgledati završni rad</h4>
+				</div>
+				<div class="modal-body">
+					<li>Solucija 1:
+						<p>Može se pisati o brodogradnji, svjetskoj trgovačkoj floti, prometu tereta morem, vozarinama...</p>
+						<p>Literaturu pogledati u popisu internet izvora na kraju popisa tema na ovoj stranici</p>
+					</li>
+					<li>Solucija 2: 
+						<p>Što god se Vi dosjetite.</p>
+					</li>
+				</div>
+				<div class="modal-footer">
+				  <h4>Primjer kako se može koncipirati rad</h4>
+				</div>
+			  </div>
+			</div>
+
+			<li><a href="#" onclick="actModal('myModal3','close3');">Ugovaranje u pomorstvu</a></li>		  
+			<div id="myModal3" class="modal">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <span class="closeMod" id="close3">&times;</span>
+				  <h4>Ugovaranje u pomorstvu, kako može izgledati diplomski rad</h4>
+				</div>
+				<div class="modal-body">
+					<li>Solucija 1:
+						<p>U prvom djelu rada se može pisati općenito o ugovorima, podjela, ugovori na vrijeme, na putovanje, Bimco.... U drugom djelu pisati malo više o ugovorima na vrijeme (ili putovanje). U narednom tekstu pisati o odabranom ugovoru kao primjeru, recimo ugovor Gencon koji je dostupan na Bimco internet stranici ovdje <a href="https://www.bimco.org/contracts-and-clauses/bimco-contracts" target="_blank" rel="noopener noreferrer">BIMCO ugovori</a></p>
+						<p>Što se tiče literature, na internetu se može tražiti s izrazima: ugovori o prijevozu stvari morem, maritime charter parties, i slično.</p></li>
+						<li>Solucija 2:
+						<p>U radu se može pisati o pomorskom tržištu i vozarinama. Što utječe na tržište, ponuda i potražnja brodova, cijena nafte, brodogradnja, kretanje i visina vozarine...</p>
+						<p>Literature se na internetu može tražiti s izrazima: pomorsko tržište, pomorske vozarine, maritime shipping market, maritime freight rates, i slično.
+						<p>Također, pogledati na stranicama organizacija UNCTAD, OECD, WTO. Sve poveznice na ove stranice su dane ovdje na kraju popisa tema.</p>
+					</li>
+					<li>Solucija 3:
+						<p>Može se pisati o svjetskoj brodogradnji. Koje države grade, koja su brodogradilišta, koji su brodovi, cijene brodova...</p>
+						<p>Za literaturu, na internetu se traži s izrazima: brodogradnja, shipbuilding analysis, shipbuilding statistics, i slično.</p>
+						<p>Može i literatura UNCTAD, OECD, WTO,...</p>
+					</li>
+					<li>Solucija 4: 
+						<p>Što god se Vi dosjetite.</p>
+					</li>
+				</div>
+				<div class="modal-footer">
+				  <h4>Primjer kako se može koncipirati rad</h4>
+				</div>
+			  </div>
+			</div>
+			
+			<li><a href="#" onclick="actModal('myModal4','close4');">Upravljanje obalnim područjem</a></li>		  
+			<div id="myModal4" class="modal">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <span class="closeMod" id="close4">&times;</span>
+				  <h4>Upravljanje obalnim područjem, kako može izgledati diplomski rad</h4>
+				</div>
+				<div class="modal-body">
+					<li>Solucija 1:
+						<p>Može se u prvom djelu rada pisati općenito o upravljanju obalnim područjem, što je to, čemu služi,.. U drugom djelu uzmete neki primjer u praksi. Npr. bilo koji primjer s moje internet stranice. </p>
+						<p>Literatura: tražite internet sa: upravljanje obalnim područjem, coastal zone management, coastal area management, i slično.</p>
+						<p>Također, na ovoj poveznici nešto literature: <a href="https://drive.google.com/file/d/1UxxvAfsXMMnmJ8SVIkW6LYcT9hwA-VxO/view?usp=sharing" target="_blank" rel="noopener noreferrer">UOP dodatna literatura</a></p>
+						<p>Postoji i "Coastal Zone Management Handbook" u publikaciji "CRC Press Book". Ova knjiga na 720 strana puno piše o temi ... Uz malo potrage, moguće je doći do nje na internetu ... </p>
+						<p>Na stranici ministarstva: <a href="https://mzoe.gov.hr/" target="_blank" rel="noopener noreferrer">Ministarstvo gospodarstva i održivog razvoja</a> može se pronaći primjere iz prakse koji su obrađeni kao STUDIJE UTJECAJA NA OKOLIŠ. Npr.:<br>
+						- Uzgajalište bijele morske ribe na lokaciji kraj otoka Maun<br>
+						- Uređenje ribarske luke Komiža, Vis<br>
+						- Projekt rekonstrukcije i proširenja Sjeverne luke na lučkom području Vranjičko-solinskog bazena pod upravom Lučke uprave Split </p>					
+					</li>
+					<li>Solucija 2: 
+						<p>Što god se Vi dosjetite.</p>
+					</li>
+				</div>
+				<div class="modal-footer">
+				  <h4>Primjer kako se može koncipirati rad</h4>
+				</div>
+			  </div>
+			</div>
+		</ul>
+		</section>
+
+		<section>
+			<h2>VAŽNO</h2>
+			<p>Koju god literaturu/podatke koristite, gledajte da bude to čim svježije moguće. </p>
+			<p>Kada pisanja rada, pazite na prepisivanje. Nastojte ne raditi previše copy-paste, pogotovo ako prepisujete iz hrvatske literature. Ako koristite literaturu na hrvatski, preoblikujte malo rečenice. Ako baš morate nešto idenitično prepisati, onda to citirajte pri dnu strane (navedite od kuda ste uzeli). Ovo je važno zato što kada predate konačni rad, u nadležnoj službi provjeravaju rad na prepisivanje pomoću web aplikacije Turnitin. Podudarnost teksta (prepisivanje) ne smije biti veće od 20%. Možete i osobno provjeriti što ste učinili tijekom ili po završetku pisanja, tako da rad ukrcate i provjerite preko web aplikacije Turnitin. Turnitinu možete pristupiti preko poveznice na web stranici fakulteta: Obrazovanje - Preddiplomski studij (ili Diplomski studij) - Samostalna provjera radova u softveru Turnitin.</p>			
+			<p>Da bi student pristupio obrani završnog/diplomskog rada, potrebno je da:</p>
+			<ol class="c">
+				<li>rad prođe provjeru u softveru Turnitin (maksimalna podudarnost 20%)</li>
+				<li>mentor potvrdi završnu verziju rada</li>
+				<li>student SAMO-ARHIVIRA završnu verziju rada</li>
+				<li>student učini PRIJAVU obrane preko poveznice na internet stranici fakulteta</li>
+			</ol>
+			<p>Za detalje vidi dole pod Dokumenti.</p>
+		</section>
+        <section>
+          <article>
+            <!-- <h2>Primjeri i mogući sadržaj</h2> -->
+            <!-- <p><strong><script>       -->
+						<!-- var message="Završni rad" -->
+						<!-- var neonbasecolor="#E85533" -->
+						<!-- var neontextcolor="black" -->
+						<!-- var flashspeed=50  //in milliseconds -->
+						<!-- var n=0 -->
+						<!-- if (document.all||document.getElementById){ -->
+						<!-- document.write('<font color="'+neonbasecolor+'">') -->
+						<!-- for (m=0;m<message.length;m++) -->
+						<!-- document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>') -->
+						<!-- document.write('</font>') -->
+						<!-- } -->
+						<!-- else -->
+						<!-- document.write(message) -->
+						<!-- beginneon() -->
+						<!-- </script></strong></p> -->
+				
+            <!-- <p>Datoteku je potrebno, najkasnije 30 dana prije planiranog termina obrane, poslati nastavniku putem internet strane <a href="#" onclick="gateKeeper('40','UPL');return false;">ovdje-&raquo;</a></p> -->
+          </article>
+		  
+		  <!-- <h2>Primjeri i mogući sadržaj</h2> -->
+			<!-- <nav> -->
+			  <!-- <ul> -->
+				<!-- <li><a href="docs/Zav-Predl.docx">Zavšni rad</a></li> -->
+				<!-- <li><a href="docs/Zav-Upute.pdf">Diplomski rad</a></li> -->
+			  <!-- </ul> -->
+			<!-- </nav> -->
+		  
+        </section>
+		<section>
+        <h2>Dokumenti</h2>
+		<p>Detaljna uputstva za pisanje rada (format, broj strana, ...), provjeru i predaju nalaze se na internet stranici fakulteta, na poveznici: Obrazovanje - Diplomski (Preddiplomski) studij. Ondje se nalaze sljedeći dokumenti i poveznice:</p>
+          <ul class="list tick">
+            <li>Predložak za izradu završnog rada</li>
+			<li>Upute za izradu završnog rada</li>
+			<li>Predložak za izradu diplomskog rada</li>
+			<li>Upute za izradu diplomskog rada</li>
+			<li>Upute za samoarhiviranje radova</li>
+			<li>Upute za akademsko pisanje</li>
+			<li>Samostalna provjera rada u softveru Turnitin</li>
+			<!-- <li><a href="docs/Zav-Predl.docx">Zavšni rad - Predložak</a></li> -->
+			<!-- <li><a href="docs/Zav-Upute.pdf">Zavšni rad - Upute</a></li> -->
+			<!-- <li><a href="docs/Zav-Pravil.pdf">Zavšni rad - Pravilnik</a></li> -->
+			<!-- <li><a href="docs/Dpl-Predl.docx">Diplomski rad - Predložak</a></li> -->
+			<!-- <li><a href="docs/Dpl-Upute.pdf">Diplomski rad - Upute</a></li> -->
+			<!-- <li><a href="docs/Dpl-Pravil.pdf">Diplomski rad - Pravilnik</a></li> -->
+			<!-- <br><li><a href="http://akademsko-pisanje.sz-ri.com/" target="_blank" rel="noopener noreferrer">UPUTE ZA AKADEMSKO PISANJE</a></li> -->
+          </ul>
+		  </section>
+        <!-- /nav -->
+        <!-- ########################################################################################## -->
+      </aside>
+    </div>
+    <!-- ################################################################################################ -->
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- Footer -->
+<div class="wrapper row7 aniRow7">
+  <div id="footer" class="clear">
+    <div class="three_quarter levogal hidepart">
+      <h2 class="footer_title">Galerija</h2>
+      <ul id="ft_gallery" class="nospace spacing clear">
+			<div id="fscontain">
+        <li class="one_eighth hidimag first"><a href="images/61.jpg"><img src="images/61t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/62.jpg"><img src="images/62t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/63.jpg"><img src="images/63t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/64.jpg"><img src="images/64t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/65.jpg"><img src="images/65t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/71.jpg"><img src="images/71t.jpg" alt=""></a></li>
+        <li class="one_eighth hidepart2"><a href="images/78.jpg"><img src="images/78t.jpg" alt=""></a></li>
+        <li class="one_eighth hidepart2"><a href="images/79.jpg"><img src="images/79t.jpg" alt=""></a></li>
+        
+        <li class="one_eighth hidimag first"><a href="images/72.jpg"><img src="images/72t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/73.jpg"><img src="images/73t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/74.jpg"><img src="images/74t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/75.jpg"><img src="images/75t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/76.jpg"><img src="images/76t.jpg" alt=""></a></li>
+        <li class="one_eighth hidimag"><a href="images/77.jpg"><img src="images/77t.jpg" alt=""></a></li>
+        <li class="one_eighth hidepart2"><a href="images/80.jpg"><img src="images/80t.jpg" alt=""></a></li>
+        <li class="one_eighth hidepart2"><a href="images/81.jpg"><img src="images/81t.jpg" alt=""></a></li>
+			</div>
+      </ul>
+    </div>
+		<a name="anchPrijava"></a>
+    <div class="one_quarter desnogal logon rnd5">
+      <h2 class="footer_title">Prijava</h2>
+      <form id="formreset" class="rnd5" name="prijava">
+        <div class="form-input clear">
+          <label for="korisnik">Korisnik <span class="required">*</span><br>
+            <input type="text" name="korisnik" id="korisnik" value="" size="22" onkeydown="clickEr();">
+          </label>
+			<div id="er" class="osx-err-hiden">Pogrešne šifre !</div>
+			<div id="ok" class="osx-err-hiden">Uspješno ste prijavljeni ! <br> Dostupni su vam sadržaji za unešenu kombinaciju Korisnik - Zaporka.</div>
+          <label for="zaporka">Zaporka <span class="required">*</span><br>
+            <input type="password" name="zaporka" id="zaporka" value="" size="22" onkeydown="clickEr();">
+          </label>
+        </div>
+        <p>
+          <input type="submit" value="Potvrdi" class="button orange small gradient" onClick="submitentry(); return false;">
+          &nbsp;
+          <input type="reset" value="Odustani" class="button black small gradient" onClick="clickEr();">
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="wrapper row4">
+  <div id="copyright" class="clear">
+    <p class="fl_left">Izrada i &copy; 2018 - MH - PFRI</p>
+    <p class="fl_right">Program BzB</p>
+  </div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="scripts/jquery-2.1.4.min.js"><\/script>')</script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script>  window.jQuery.ui || document.write('<script src="scripts/jquery-ui.min.js"><\/script>') </script>
+<script src="scripts/custom.js"></script>
+
+<script>
+jQuery(document).ready(function($){ $('img').removeAttr('width height'); });
+$(document).ready(function() {
+	document.getElementById('formreset').reset();
+	$(function() {slick( );});
+	$(function() {fullsiz( );});
+	$(function() {$(document).tooltip({track: true});});
+});
+function fader() {$("#loading").fadeOut(500);}
+document.addEventListener("DOMContentLoaded", fader());
+window.addEventListener("beforeunload", function () {document.body.classList.add("animate-out");});
+</script>
+</body>
+</html>
