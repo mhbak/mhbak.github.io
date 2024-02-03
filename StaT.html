@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>M.Hess - Staze</title>
+<meta charset="iso-8859-1">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+	 
+<!-- Leaflet-KML JavaScript -->
+<script src="https://unpkg.com/leaflet-kml/dist/leaflet-kml.js"></script>
+
+
+	<div id="map_canvas" class="canvas" style="margin-top: 30px">
+	<div class="links">
+		<!-- <a href="http://www.gpsies.com/mapFolderOnly.do?id=66517" class="button2 activecolor" >Bicikl</a>
+		<a href="http://www.gpsies.com/mapFolderOnly.do?id=66516" class="button2 normalcolor" >Pješke</a>
+		<a href="http://www.gpsies.com/mapFolderOnly.do?id=59570" class="button2 normalcolor" >Sve</a> -->
+		<!-- <button class="button2 button2h activecolor" value="https://www.gpsvisualizer.com/display/20230920034357-04002-map.html?center=45.137532,14.740868&zoom=10"><span>Pješke</span></button> -->
+		<!-- <button class="button2 button2b normalcolor" value="https://www.gpsvisualizer.com/display/20230920033908-04002-map.html?center=45.137532,14.740868&zoom=10"><span>Bicikl</span></button> -->
+		<!-- <button class="button2 button2s normalcolor" value="https://www.gpsvisualizer.com/display/20230920035129-04002-map.html?center=45.137532,14.740868&zoom=10"><span>Sve</span></button> -->
+		<button class="button2 button2h activecolor" value="https://mhbak.github.io/Pjeske.html"><span>Pješke</span></button>
+		<button class="button2 button2b normalcolor" value="https://mhbak.github.io/Bicikli.html"><span>Bicikl</span></button>
+		<button class="button2 button2s normalcolor" value="https://mhbak.github.io/Sve.html"><span>Sve</span></button>
+	</div>	
+	<img id="rucica" src="images/rucica.gif" style="position: absolute; margin-left: 50%; margin-top: 60px; display:none" border="0" width="54">
+		<!-- <iframe src="https://mhbak.github.io/Pjeske.html" width="100%" height="960" frameborder="0" scrolling="no" scrollZoom="false" marginheight="0" marginwidth="0" name="search_iframe" id="fram"></iframe> -->
+		
+<!-- ################################################################################################ -->
+		<div id="map" style="height: 960px; width: 100%"></div>
+		<!-- <script> -->
+		  <!-- var map = L.map('map').setView([latitude, longitude], zoomLevel); -->
+		  <!-- L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map); -->
+		<!-- </script> -->
+		
+<script>
+var map = L.map('map').setView([45.2, 14.5], 10);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+</script>
+		
+		
+		<script>
+		  // URL to your KML file
+		  var kmlUrl = 'staze/PjeskeGKiOstalo.kml';
+
+		  // Create KML layer
+		  var kmlLayer = new L.KML(kmlUrl, { async: true });
+
+		  // Add KML layer to the map
+		  kmlLayer.addTo(map);
+		</script>
+		
+
+<!-- ################################################################################################ -->
+		
+	</div>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="scripts/jquery-2.1.4.min.js"><\/script>')</script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script>  window.jQuery.ui || document.write('<script src="scripts/jquery-ui.min.js"><\/script>') </script>
+</body>
+</html>
